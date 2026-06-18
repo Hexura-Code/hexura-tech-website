@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+  <defs>
+    <style>* { font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; }</style>
+
+    <!-- Background: near-black navy -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#03060d"/>
+      <stop offset="100%" stop-color="#060e1c"/>
+    </linearGradient>
+
+    <!-- Brand gradient -->
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Headline: white fading to pale blue -->
+    <linearGradient id="headline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+
+    <!-- Right-side ambient light -->
+    <radialGradient id="rightGlow" cx="60%" cy="45%" r="55%">
+      <stop offset="0%"   stop-color="#1d4ed8" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Node glow -->
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Central node glow -->
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft blur for halos -->
+    <filter id="halo">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="haloSm">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+
+    <!-- Very subtle headline glow -->
+    <filter id="textGlow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14" result="b"/>
+      <feFlood flood-color="#3b82f6" flood-opacity="0.3" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Left ambient -->
+    <radialGradient id="leftGlow" cx="25%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#1e3a8a" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ── BACKGROUND ── -->
+  <rect width="1500" height="500" fill="url(#bg)"/>
+
+  <!-- Ambient light layers — barely visible -->
+  <rect width="1500" height="500" fill="url(#leftGlow)"/>
+  <rect width="1500" height="500" fill="url(#rightGlow)"/>
+
+
+  <!-- ════════════════════════════════════════
+       LEFT PANEL  — 60% width (0–900)
+       Only 4 elements: logo, headline, sub, tagline
+  ════════════════════════════════════════ -->
+
+  <!-- ── LOGO ── -->
+  <!-- Hexagon outline -->
+  <polygon points="86,148 110,134 134,148 134,176 110,190 86,176"
+           fill="none" stroke="url(#brand)" stroke-width="1.8" opacity="0.95"/>
+  <!-- H letterform -->
+  <text x="110" y="172" text-anchor="middle" font-size="22"
+        font-weight="900" fill="url(#brand)">H</text>
+
+  <!-- Company name -->
+  <text x="152" y="172" font-size="22" font-weight="800"
+        letter-spacing="6" fill="#f8fafc">HEXURA</text>
+  <text x="310" y="172" font-size="22" font-weight="300"
+        letter-spacing="6" fill="url(#brand)">TECH</text>
+
+  <!-- ── HEADLINE ── -->
+  <text x="86" y="275" font-size="68" font-weight="900"
+        letter-spacing="-2" fill="url(#headline)" filter="url(#textGlow)">AI-Powered</text>
+  <text x="86" y="358" font-size="68" font-weight="900"
+        letter-spacing="-2" fill="url(#headline)">Technology Solutions</text>
+
+  <!-- ── SUBHEADLINE ── -->
+  <text x="88" y="406" font-size="19" font-weight="400"
+        fill="#475569" letter-spacing="0.3">
+    AI Agents  ·  Automation  ·  Software Development  ·  Cloud Solutions
+  </text>
+
+  <!-- ── TAGLINE ── -->
+  <text x="88" y="454" font-size="15" font-weight="600"
+        letter-spacing="1.5" fill="url(#brand)" opacity="0.75">
+    BUILD FASTER.  AUTOMATE SMARTER.  SCALE CONFIDENTLY.
+  </text>
+
+
+  <!-- ════════════════════════════════════════
+       RIGHT PANEL — 40% width (900–1500)
+       ONE illustration: sparse node constellation
+  ════════════════════════════════════════ -->
+
+  <!--
+    9 nodes — sparse, constellation-style
+    Plenty of empty space between each
+    ──────────────────────────────────
+    A  1020, 118    small
+    B  1190,  88    tiny
+    C  1340, 130    small
+    D  1460, 210    tiny
+    E  1160, 240    MAIN (featured, centre)
+    F   980, 310    small
+    G  1320, 310    small
+    H  1080, 420    tiny
+    I  1400, 390    tiny
+  -->
+
+  <!-- ── CONNECTION LINES (draw first) ── -->
+  <!-- Very faint base connections -->
+  <g stroke="#1e3a8a" stroke-width="1" fill="none" opacity="0.5">
+    <line x1="1020" y1="118" x2="1190" y2="88"/>
+    <line x1="1190" y1="88"  x2="1340" y2="130"/>
+    <line x1="1340" y1="130" x2="1460" y2="210"/>
+    <line x1="1020" y1="118" x2="1160" y2="240"/>
+    <line x1="1190" y1="88"  x2="1160" y2="240"/>
+    <line x1="1340" y1="130" x2="1160" y2="240"/>
+    <line x1="1460" y1="210" x2="1160" y2="240"/>
+    <line x1="1460" y1="210" x2="1320" y2="310"/>
+    <line x1="1160" y1="240" x2="980"  y2="310"/>
+    <line x1="1160" y1="240" x2="1320" y2="310"/>
+    <line x1="980"  y1="310" x2="1080" y2="420"/>
+    <line x1="1320" y1="310" x2="1080" y2="420"/>
+    <line x1="1320" y1="310" x2="1400" y2="390"/>
+  </g>
+
+  <!-- Highlighted active connections — slightly brighter -->
+  <g stroke="url(#brand)" stroke-width="1.2" fill="none" opacity="0.28">
+    <line x1="1190" y1="88"  x2="1160" y2="240"/>
+    <line x1="1020" y1="118" x2="1160" y2="240"/>
+    <line x1="1340" y1="130" x2="1160" y2="240"/>
+    <line x1="1160" y1="240" x2="980"  y2="310"/>
+    <line x1="1160" y1="240" x2="1320" y2="310"/>
+    <line x1="1080" y1="420" x2="1320" y2="310"/>
+  </g>
+
+  <!-- ── NODE HALOS (soft glow behind important nodes) ── -->
+  <!-- Main node halo -->
+  <circle cx="1160" cy="240" r="52" fill="url(#coreGlow)" filter="url(#halo)"/>
+  <circle cx="1160" cy="240" r="28" fill="#3b82f6" opacity="0.08" filter="url(#halo)"/>
+
+  <!-- Secondary halos -->
+  <circle cx="1190" cy="88"  r="24" fill="url(#nodeGlow)" filter="url(#haloSm)"/>
+  <circle cx="980"  cy="310" r="22" fill="url(#nodeGlow)" filter="url(#haloSm)"/>
+  <circle cx="1320" cy="310" r="22" fill="url(#coreGlow)" filter="url(#haloSm)"/>
+
+  <!-- ── NODES ── -->
+
+  <!-- Tiny nodes -->
+  <circle cx="1460" cy="210" r="3.5" fill="#3b82f6" opacity="0.55"/>
+  <circle cx="1080" cy="420" r="3.5" fill="#06b6d4" opacity="0.50"/>
+  <circle cx="1400" cy="390" r="3"   fill="#3b82f6" opacity="0.45"/>
+
+  <!-- Small nodes -->
+  <circle cx="1020" cy="118" r="5.5" fill="#3b82f6" opacity="0.75"/>
+  <circle cx="1340" cy="130" r="5.5" fill="#06b6d4" opacity="0.75"/>
+
+  <!-- Secondary nodes — ring style -->
+  <circle cx="1190" cy="88"  r="8"   fill="#03060d"/>
+  <circle cx="1190" cy="88"  r="8"   fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="1190" cy="88"  r="3.5" fill="#06b6d4" opacity="0.95"/>
+
+  <circle cx="980"  cy="310" r="8"   fill="#03060d"/>
+  <circle cx="980"  cy="310" r="8"   fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="980"  cy="310" r="3.5" fill="#06b6d4" opacity="0.95"/>
+
+  <circle cx="1320" cy="310" r="8"   fill="#03060d"/>
+  <circle cx="1320" cy="310" r="8"   fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="1320" cy="310" r="3.5" fill="#3b82f6" opacity="0.95"/>
+
+  <!-- MAIN CENTRE NODE — E (1160, 240) -->
+  <circle cx="1160" cy="240" r="18"  fill="#03060d"/>
+  <circle cx="1160" cy="240" r="18"  fill="none" stroke="url(#brand)" stroke-width="2" opacity="1"/>
+  <circle cx="1160" cy="240" r="8"   fill="url(#brand)" opacity="0.95"/>
+  <!-- Pulse ring -->
+  <circle cx="1160" cy="240" r="18" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0">
+    <animate attributeName="r"       values="18;34;18" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4"  dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- ── BOTTOM ACCENT BAR ── -->
+  <rect x="0" y="492" width="1500" height="8" fill="url(#brand)" opacity="0.55" rx="0"/>
+
+</svg>

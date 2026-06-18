@@ -1,0 +1,16 @@
+# Server
+server.py
+
+# Old banner versions
+upwork-banner.svg
+upwork-banner-v2.svg
+upwork-banner-v3.svg
+upwork-banner-v4.svg
+
+# Large PNG exports (regenerate from SVG if needed)
+upwork-banner-v5.png
+linkedin-banner.png
+upwork-banner-strip.png
+
+# Claude
+.claude/

@@ -1,0 +1,2293 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Hexura Tech | AI Agents, Automation & Technology Consultancy</title>
+  <meta name="description" content="Hexura Tech is an AI-first technology consultancy delivering AI Agents, business automation, custom software, cloud & DevOps, QA, data analytics, and digital transformation solutions.">
+  <meta name="keywords" content="AI agents, business automation, AI consulting, custom software development, cloud DevOps, QA automation, data analytics, digital transformation, technology consultancy">
+  <meta name="author" content="Hexura Tech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.hexura.tech">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hexura Tech | AI Agents, Automation & Technology Consultancy">
+  <meta property="og:description" content="AI-first technology partner for businesses ready to build smarter. AI Agents, automation, software development, cloud, and data analytics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hexura.tech">
+  <meta property="og:image" content="https://www.hexura.tech/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hexura Tech | AI Agents, Automation & Technology Consultancy">
+  <meta name="twitter:description" content="AI-first technology partner. AI Agents, automation, software, cloud & data solutions.">
+
+  <!-- Favicon (SVG inline) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='36' y2='36' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' fill='url(%23g)' opacity='.2'/%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' stroke='url(%23g)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M12 11V25M12 18H24M24 11V25' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0B1220', 800: '#0d1628', 900: '#070d18' },
+            'electric-blue': { DEFAULT: '#3B82F6', 400: '#60a5fa', 600: '#2563eb' },
+            'brand-cyan': { DEFAULT: '#06B6D4', 400: '#22d3ee', 600: '#0891b2' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Manrope', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #0B1220;
+      color: #F8FAFC;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0B1220; }
+    ::-webkit-scrollbar-thumb { background: rgba(59,130,246,.35); border-radius: 3px; }
+
+    /* ── Glass ── */
+    .glass {
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+    .glass-strong {
+      background: rgba(255,255,255,.07);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    /* ── Gradient text ── */
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6, #06B6D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Gradient border ── */
+    .gradient-border {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(#0B1220, #0B1220) padding-box,
+        linear-gradient(135deg, rgba(59,130,246,.4), rgba(6,182,212,.4)) border-box;
+    }
+    .gradient-border-mid {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(#080e1a, #080e1a) padding-box,
+        linear-gradient(135deg, rgba(59,130,246,.4), rgba(6,182,212,.4)) border-box;
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #3B82F6, #06B6D4);
+      color: #fff; padding: 13px 28px;
+      border-radius: 9px; font-weight: 600; font-size: 15px;
+      display: inline-flex; align-items: center; gap: 8px;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,130,246,.4); }
+    .btn-primary::after {
+      content: '';
+      position: absolute; top: -50%; left: -100%;
+      width: 60%; height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+      transform: rotate(45deg);
+    }
+    .btn-primary:hover::after { animation: shine .55s ease; }
+
+    .btn-outline {
+      background: transparent;
+      color: #F8FAFC; padding: 13px 28px;
+      border-radius: 9px; font-weight: 600; font-size: 15px;
+      display: inline-flex; align-items: center; gap: 8px;
+      text-decoration: none; cursor: pointer;
+      border: 1px solid rgba(255,255,255,.15);
+      transition: all .25s ease;
+      white-space: nowrap;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.3); transform: translateY(-2px); }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(59,130,246,.1);
+      border: 1px solid rgba(59,130,246,.18);
+      color: #60a5fa; padding: 4px 14px;
+      border-radius: 100px; font-size: 12px;
+      font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .badge-cyan {
+      background: rgba(6,182,212,.1);
+      border-color: rgba(6,182,212,.18);
+      color: #22d3ee;
+    }
+
+    /* ── Cards ── */
+    .service-card {
+      background: rgba(255,255,255,.025);
+      border: 1px solid rgba(255,255,255,.055);
+      border-radius: 16px; padding: 28px;
+      transition: all .3s ease;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59,130,246,.5), transparent);
+      opacity: 0; transition: opacity .3s ease;
+    }
+    .service-card:hover {
+      background: rgba(59,130,246,.045);
+      border-color: rgba(59,130,246,.18);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 48px rgba(0,0,0,.35);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .ai-card {
+      background: linear-gradient(135deg, rgba(59,130,246,.06), rgba(6,182,212,.06));
+      border: 1px solid rgba(59,130,246,.12);
+      border-radius: 16px; padding: 28px;
+      transition: all .3s ease; position: relative; overflow: hidden;
+    }
+    .ai-card:hover {
+      border-color: rgba(59,130,246,.3);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 48px rgba(59,130,246,.12);
+    }
+
+    /* ── Tech tag ── */
+    .tech-tag {
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 9px; padding: 9px 16px;
+      font-size: 13px; font-weight: 500;
+      color: rgba(248,250,252,.65);
+      transition: all .25s ease;
+      display: inline-flex; align-items: center; gap: 8px;
+      cursor: default;
+    }
+    .tech-tag:hover {
+      background: rgba(59,130,246,.08);
+      border-color: rgba(59,130,246,.2);
+      color: #F8FAFC;
+    }
+    .tech-tag-ai {
+      background: linear-gradient(135deg, rgba(59,130,246,.06), rgba(6,182,212,.06));
+      border: 1px solid rgba(59,130,246,.15);
+      color: rgba(248,250,252,.8);
+    }
+    .tech-tag-ai:hover {
+      background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(6,182,212,.12));
+      border-color: rgba(59,130,246,.35);
+      color: #F8FAFC;
+    }
+
+    /* ── Form ── */
+    .form-input {
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.075);
+      border-radius: 9px; padding: 12px 16px;
+      color: #F8FAFC; width: 100%; font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      transition: all .25s ease; outline: none;
+    }
+    .form-input:focus {
+      border-color: rgba(59,130,246,.5);
+      box-shadow: 0 0 0 3px rgba(59,130,246,.1);
+    }
+    .form-input::placeholder { color: rgba(248,250,252,.28); }
+    .form-input option { background: #0d1628; }
+
+    /* ── Section backgrounds ── */
+    .bg-dark { background: #080e1a; }
+    .bg-mid  { background: #0d1628; }
+
+    /* ── Reveal animations ── */
+    .reveal {
+      opacity: 0; transform: translateY(36px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Hero gradient ── */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse at 15% 50%, rgba(59,130,246,.13) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 20%, rgba(6,182,212,.09) 0%, transparent 45%),
+        radial-gradient(ellipse at 55% 85%, rgba(59,130,246,.07) 0%, transparent 45%),
+        #0B1220;
+    }
+
+    /* ── Glow orb ── */
+    .orb {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      filter: blur(80px);
+    }
+
+    /* ── Hover underline ── */
+    .link-hover {
+      position: relative; display: inline-block;
+    }
+    .link-hover::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: linear-gradient(90deg, #3B82F6, #06B6D4);
+      transition: width .3s ease;
+    }
+    .link-hover:hover::after { width: 100%; }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59,130,246,.25), transparent);
+    }
+
+    /* ── Process number ── */
+    .process-num {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(6,182,212,.12));
+      border: 1px solid rgba(59,130,246,.18);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+      font-family: 'Manrope', sans-serif; font-weight: 900; font-size: 22px;
+      background-clip: text; position: relative;
+    }
+
+    /* ── Code block ── */
+    .code-block {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; line-height: 1.8;
+    }
+
+    /* ── Float animation ── */
+    .float-a { animation: floatA 7s ease-in-out infinite; }
+    .float-b { animation: floatB 9s ease-in-out infinite; }
+
+    /* ── Nav scrolled ── */
+    .nav-scrolled {
+      background: rgba(11,18,32,.92) !important;
+      backdrop-filter: blur(20px) !important;
+      border-bottom: 1px solid rgba(255,255,255,.05) !important;
+    }
+
+    /* ── Stat ── */
+    .stat-label { font-size: 11px; color: rgba(248,250,252,.4); margin-top: 2px; letter-spacing: .04em; }
+
+    /* ── Keyframes ── */
+    @keyframes shine {
+      0%   { left: -100%; }
+      100% { left: 200%; }
+    }
+    @keyframes floatA {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-16px); }
+    }
+    @keyframes floatB {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-12px); }
+    }
+    @keyframes pulseRing {
+      0%   { transform: scale(1); opacity: .7; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0; }
+    }
+    .pulse-dot::after {
+      content: ''; display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #22d3ee; margin-left: 6px;
+      animation: pulseRing 2s ease-out infinite;
+      vertical-align: middle;
+    }
+    .cursor-blink { animation: blink 1s step-end infinite; }
+
+    /* ── Mobile menu transition ── */
+    #mobile-menu {
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease;
+    }
+    #mobile-menu.open { max-height: 400px; }
+
+    /* ── Stat border ── */
+    .stat-mid { border-left: 1px solid rgba(255,255,255,.06); border-right: 1px solid rgba(255,255,255,.06); }
+
+    /* ── Feature image sections ── */
+    .feature-img {
+      border-radius: 20px; overflow: hidden;
+      position: relative;
+    }
+    .feature-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .feature-img:hover img { transform: scale(1.04); }
+    .feature-img::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(59,130,246,.15) 0%, rgba(6,182,212,.1) 100%);
+      pointer-events: none;
+    }
+    .img-frame {
+      position: relative;
+    }
+    .img-frame::before {
+      content: '';
+      position: absolute; inset: -1px;
+      border-radius: 21px;
+      background: linear-gradient(135deg, rgba(59,130,246,.35), rgba(6,182,212,.2), transparent);
+      z-index: -1;
+    }
+
+    /* ── Service icon badge ── */
+    .svc-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px; flex-shrink: 0;
+      transition: transform .3s ease;
+    }
+    .service-card:hover .svc-icon { transform: scale(1.1); }
+
+    /* ── Glow pill ── */
+    .glow-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, rgba(59,130,246,.08), rgba(6,182,212,.08));
+      border: 1px solid rgba(59,130,246,.2);
+      border-radius: 100px; padding: 6px 16px;
+      font-size: 13px; font-weight: 500; color: #93c5fd;
+    }
+
+    /* ── Section wave divider ── */
+    .wave-divider { line-height: 0; }
+    .wave-divider svg { display: block; }
+
+    /* ── Floating stat card ── */
+    .stat-float {
+      position: absolute;
+      background: rgba(11,18,32,.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px; padding: 14px 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    }
+
+    /* ── Checklist ── */
+    .check-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14px; color: rgba(248,250,252,.7); margin-bottom: 10px;
+    }
+    .check-item .check-dot {
+      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(59,130,246,.2), rgba(6,182,212,.2));
+      border: 1px solid rgba(6,182,212,.3);
+      display: flex; align-items: center; justify-content: center; margin-top: 1px;
+    }
+
+    /* ── Marquee logos ── */
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      display: flex; gap: 32px; white-space: nowrap;
+      animation: marquee 28s linear infinite;
+    }
+    .marquee-wrap { overflow: hidden; }
+  </style>
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex items-center justify-between h-16 md:h-[72px]">
+
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hexura Tech Logo">
+          <defs>
+            <linearGradient id="navLogoGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#3B82F6"/>
+              <stop offset="100%" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+          <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z"
+                fill="url(#navLogoGrad)" opacity="0.12"/>
+          <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z"
+                stroke="url(#navLogoGrad)" stroke-width="1.4" fill="none"/>
+          <path d="M13 12.5V25.5M13 19H25M25 12.5V25.5"
+                stroke="url(#navLogoGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-display font-extrabold text-[18px] text-white tracking-tight">
+          Hexura<span class="gradient-text"> Tech</span>
+        </span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Services</a>
+        <a href="#why-us"   class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Why Us</a>
+        <a href="#process"  class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Process</a>
+        <a href="#about"    class="text-sm text-slate-400 hover:text-white transition-colors link-hover">About</a>
+        <a href="#book"     class="btn-primary !py-2.5 !px-5 !text-sm">Book a Call</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg glass" aria-label="Toggle menu">
+        <svg id="hamburger-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden glass border-t border-white/5">
+    <div class="px-5 py-4 flex flex-col gap-1">
+      <a href="#services" class="text-sm text-slate-300 hover:text-white py-2.5 border-b border-white/5">Services</a>
+      <a href="#why-us"   class="text-sm text-slate-300 hover:text-white py-2.5 border-b border-white/5">Why Hexura</a>
+      <a href="#process"  class="text-sm text-slate-300 hover:text-white py-2.5 border-b border-white/5">Our Process</a>
+      <a href="#about"    class="text-sm text-slate-300 hover:text-white py-2.5 border-b border-white/5">About</a>
+      <a href="#contact"  class="text-sm text-slate-300 hover:text-white py-2.5 border-b border-white/5">Contact</a>
+      <a href="#book"     class="btn-primary mt-3 justify-center">Book a Free Call</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section id="home" class="relative min-h-screen flex items-center hero-bg overflow-hidden">
+
+  <!-- Canvas network animation -->
+  <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+
+  <!-- Gradient orbs -->
+  <div class="orb w-[500px] h-[500px] bg-blue-600/10  top-1/4  left-[-5%]"></div>
+  <div class="orb w-[400px] h-[400px] bg-cyan-500/7   bottom-0  right-[-5%]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 py-40 pt-48 w-full">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <!-- Top badge -->
+      <div class="inline-flex items-center gap-2 badge badge-cyan mb-7 reveal">
+        <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></span>
+        AI-First Technology Consultancy
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-display text-[46px] sm:text-[58px] md:text-[70px] font-black leading-[1.08] tracking-tight mb-6 reveal" style="transition-delay:.08s">
+        <span class="text-white">Build Smarter with</span><br>
+        <span class="gradient-text">AI Agents & Automation</span><br>
+        <span class="text-white">for Your Business</span>
+      </h1>
+
+      <!-- Sub -->
+      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed reveal" style="transition-delay:.18s">
+        From <span class="text-slate-200 font-medium">autonomous AI agents</span> and custom software to cloud infrastructure and data intelligence.
+        Hexura Tech is your end-to-end technology partner.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center reveal" style="transition-delay:.26s">
+        <a href="https://calendly.com/d/ds6q-jtf-3dm/discovery-call" target="_blank" class="btn-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+          Book a Free Consultation
+        </a>
+        <a href="#contact" class="btn-outline">
+          Contact Us
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="inline-grid grid-cols-3 gap-0 mt-16 glass rounded-2xl overflow-hidden reveal" style="transition-delay:.34s">
+        <div class="px-8 py-5 text-center">
+          <div class="font-display font-black text-3xl gradient-text">50+</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="px-8 py-5 text-center stat-mid">
+          <div class="font-display font-black text-3xl gradient-text">98<span style="-webkit-text-fill-color:#06b6d4;color:#06b6d4">%</span></div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="px-8 py-5 text-center">
+          <div class="font-display font-black text-3xl gradient-text">5×</div>
+          <div class="stat-label">Faster Releases</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating badges -->
+
+    <!-- Top right -->
+    <div class="hidden xl:block absolute float-a" style="top:18%;right:2%">
+      <div class="glass rounded-xl px-4 py-3 text-xs">
+        <div class="text-green-400 font-semibold mb-1">✓ All Tests Passing</div>
+        <div class="text-slate-400">1,247 / 1,247 scenarios</div>
+      </div>
+    </div>
+
+    <!-- Bottom right -->
+    <div class="hidden xl:block absolute float-b" style="bottom:22%;right:2%;animation-delay:4s">
+      <div class="glass rounded-xl px-4 py-3 text-xs">
+        <div class="text-cyan-400 font-semibold mb-1">⚡ Pipeline Complete</div>
+        <div class="text-slate-400">Build · Test · Deploy · 2m 14s</div>
+      </div>
+    </div>
+
+    <!-- Top left -->
+    <div class="hidden xl:block absolute float-a" style="top:18%;left:2%;animation-delay:1s">
+      <div class="glass rounded-xl px-4 py-3 text-xs">
+        <div class="text-violet-400 font-semibold mb-1">🚀 App Deployed</div>
+        <div class="text-slate-400">v2.4.1 · Production · 0 errors</div>
+      </div>
+    </div>
+
+    <!-- Bottom left -->
+    <div class="hidden xl:block absolute float-b" style="bottom:22%;left:2%;animation-delay:2.5s">
+      <div class="glass rounded-xl px-4 py-3 text-xs">
+        <div class="text-blue-400 font-semibold mb-1">🤖 AI Agent Running</div>
+        <div class="text-slate-400">Exploring 48 user flows…</div>
+      </div>
+    </div>
+
+    <!-- Mid left -->
+    <div class="hidden xl:block absolute float-a" style="top:50%;left:2%;transform:translateY(-50%);animation-delay:3s">
+      <div class="glass rounded-xl px-4 py-3 text-xs">
+        <div class="text-yellow-400 font-semibold mb-1">📊 Performance Score</div>
+        <div class="text-slate-400">99 / 100 · Core Web Vitals</div>
+      </div>
+    </div>
+
+    <!-- Mid right -->
+    <div class="hidden xl:block absolute float-b" style="top:50%;right:2%;transform:translateY(-50%);animation-delay:5s">
+      <div class="glass rounded-xl px-4 py-3 text-xs">
+        <div class="text-pink-400 font-semibold mb-1">📱 Mobile Build Ready</div>
+        <div class="text-slate-400">iOS & Android · v1.8.0</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 text-xs">
+    <span>Scroll to explore</span>
+    <div class="w-5 h-8 border border-white/15 rounded-full flex justify-center pt-1.5">
+      <div class="w-1 h-2 bg-blue-400 rounded-full animate-bounce"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════════════ -->
+<section id="services" class="py-28 bg-dark">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-16 reveal">
+      <div class="badge mb-5">What We Offer</div>
+      <h2 class="font-display text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+        Seven Ways We Help You<br>
+        <span class="gradient-text">Move Faster with AI</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+        From autonomous AI agents to cloud infrastructure and data intelligence — Hexura Tech is your full-spectrum AI and technology partner at every stage of your business journey.
+      </p>
+    </div>
+
+    <!-- Services Grid — 7 services -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+
+      <!-- 1. AI Agents & Business Automation -->
+      <div class="service-card reveal lg:col-span-1">
+        <div class="svc-icon bg-gradient-to-br from-blue-500/15 to-violet-500/15 border border-blue-500/15">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+            <defs><linearGradient id="s1g" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+            <circle cx="12" cy="8" r="4" stroke="url(#s1g)"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="url(#s1g)" stroke-linecap="round"/>
+            <path d="M18 3l2 2-2 2M20 5h-3" stroke="url(#s1g)" stroke-linecap="round"/>
+            <circle cx="19" cy="15" r="3" stroke="url(#s1g)"/>
+            <path d="M17 15h4M19 13v4" stroke="url(#s1g)" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg mb-2">AI Agents &amp; Business Automation</h3>
+        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Deploy autonomous AI agents that handle complex workflows, decision-making, and repetitive processes — freeing your team to focus on what matters.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">LangChain / CrewAI</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">OpenAI / Claude</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">MCP Servers</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">RAG Pipelines</span>
+        </div>
+      </div>
+
+      <!-- 2. AI-Powered QA & Test Automation -->
+      <div class="service-card reveal lg:col-span-1" style="transition-delay:.07s">
+        <div class="svc-icon bg-gradient-to-br from-cyan-500/15 to-blue-500/15 border border-cyan-500/15">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+            <defs><linearGradient id="s2g" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#06B6D4"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+            <path d="M9 11l3 3L22 4" stroke="url(#s2g)" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="url(#s2g)" stroke-linecap="round"/>
+            <circle cx="18" cy="18" r="3" stroke="url(#s2g)"/>
+            <path d="M18 17v1l.5.5" stroke="url(#s2g)" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg mb-2">AI-Powered QA &amp; Test Automation</h3>
+        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Intelligent test automation with self-healing scripts, AI test agents that explore your product 24/7, and automated test generation from requirements.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Playwright</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Selenium / Cypress</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">AI Test Agents</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Self-Healing</span>
+        </div>
+      </div>
+
+      <!-- 3. Custom Software Development -->
+      <div class="service-card reveal lg:col-span-1" style="transition-delay:.14s">
+        <div class="svc-icon bg-gradient-to-br from-violet-500/15 to-purple-500/15 border border-violet-500/15">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+            <defs><linearGradient id="s3g" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+            <polyline points="16,18 22,12 16,6" stroke="url(#s3g)" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="8,6 2,12 8,18" stroke="url(#s3g)" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="12" y1="2" x2="12" y2="22" stroke="url(#s3g)" stroke-linecap="round" opacity=".5"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg mb-2">Custom Software Development</h3>
+        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Full-stack web and mobile applications engineered for scale — from MVP to enterprise-grade product, built with modern frameworks and clean architecture.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">React / Next.js</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">React Native</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Node.js / Python</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Flutter</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <!-- 4. Cloud & DevOps -->
+      <div class="service-card reveal" style="transition-delay:.07s">
+        <div class="svc-icon bg-gradient-to-br from-yellow-500/15 to-orange-500/15 border border-yellow-500/15">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="1.8">
+            <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" stroke-linecap="round"/>
+            <path d="M13 16l2-2-2-2M9 16l-2-2 2-2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg mb-2">Cloud &amp; DevOps Solutions</h3>
+        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Infrastructure as code, CI/CD pipelines, container orchestration, and cloud architecture that keeps your systems reliable and teams shipping faster.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">AWS / Azure / GCP</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Docker / Kubernetes</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Terraform</span>
+        </div>
+      </div>
+
+      <!-- 5. API Development & Integration -->
+      <div class="service-card reveal" style="transition-delay:.14s">
+        <div class="svc-icon bg-gradient-to-br from-green-500/15 to-teal-500/15 border border-green-500/15">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.8">
+            <path d="M8 9l3 3-3 3M13 15h3" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="3" y="5" width="18" height="14" rx="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg mb-2">API Development &amp; Integration</h3>
+        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Design, build, and integrate robust RESTful and GraphQL APIs. Connect your systems, third-party platforms, and data sources seamlessly.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">REST / GraphQL</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Webhooks</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Microservices</span>
+        </div>
+      </div>
+
+      <!-- 6. Data Analytics & BI -->
+      <div class="service-card reveal" style="transition-delay:.21s">
+        <div class="svc-icon bg-gradient-to-br from-pink-500/15 to-rose-500/15 border border-pink-500/15">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="1.8">
+            <path d="M18 20V10M12 20V4M6 20v-6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 20h18" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg mb-2">Data Analytics &amp; BI</h3>
+        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Turn raw data into business decisions. Interactive dashboards, data pipelines, predictive analytics, and AI-driven insights for smarter operations.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Power BI / Tableau</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">ETL Pipelines</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Predictive AI</span>
+        </div>
+      </div>
+
+      <!-- 7. Technology Consulting -->
+      <div class="service-card reveal" style="transition-delay:.28s">
+        <div class="svc-icon bg-gradient-to-br from-teal-500/15 to-cyan-500/15 border border-teal-500/15">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="1.8">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white text-lg mb-2">Tech Consulting &amp; Transformation</h3>
+        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Strategic technology roadmaps, AI adoption planning, architecture reviews, and digital transformation leadership from senior engineers.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">AI Strategy</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Architecture</span>
+          <span class="text-xs px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5">Digital Transformation</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURE 1 — AI AGENTS & AUTOMATION (image LEFT)
+     Image: AI neural chip visualization — Unsplash (D koi)
+     URL: https://unsplash.com/photos/bcc4688e7485
+     Why: Futuristic glowing AI chip — communicates intelligence,
+          automation, and machine reasoning perfectly.
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-navy relative overflow-hidden">
+  <div class="orb w-[600px] h-[400px] bg-blue-600/6 top-[-5%] left-[-5%]"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image LEFT -->
+      <div class="reveal img-frame">
+        <div class="feature-img" style="height:440px">
+          <img
+            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&q=80&auto=format&fit=crop"
+            alt="Futuristic AI neural chip representing autonomous AI agents and intelligent business automation"
+            loading="lazy"
+            style="height:440px"
+          >
+          <div class="stat-float" style="bottom:24px;left:24px">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">AI Agent Active</div>
+                <div class="text-slate-400 text-xs">Processing 48 workflows…</div>
+              </div>
+            </div>
+          </div>
+          <div class="stat-float" style="top:24px;left:24px">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              <span class="text-white text-xs font-medium">3 Agents Running</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text RIGHT -->
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="glow-pill mb-6">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          AI Agents &amp; Business Automation
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Let AI Agents Do the<br><span class="gradient-text">Heavy Lifting</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          We design and deploy multi-agent systems that work autonomously — handling customer interactions, data processing, report generation, and complex decision trees without human intervention.
+        </p>
+        <div class="space-y-3 mb-8">
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Custom AI agents built with LangChain, CrewAI &amp; AutoGen</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>RAG pipelines connecting your knowledge base to AI</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Human-in-the-loop workflows for critical decisions</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Integration with Slack, CRM, ERP, and custom tools via MCP</span></div>
+        </div>
+        <a href="#contact" class="btn-primary">Start Automating</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURE 2 — AI-POWERED QA & TESTING (text LEFT, image RIGHT)
+     Image: Dark multi-monitor dev/QA dashboard — Unsplash (Mohammad Rahmani)
+     URL: https://unsplash.com/photos/4dd421887fb3
+     Why: Multiple dark screens with code/dashboards conveys
+          CI/CD pipelines, test monitoring, and AI-assisted QA.
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-dark relative overflow-hidden">
+  <div class="orb w-[500px] h-[400px] bg-cyan-600/5 top-0 right-0"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Text LEFT -->
+      <div class="reveal">
+        <div class="glow-pill mb-6" style="color:#22d3ee;border-color:rgba(6,182,212,.3)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          AI-Powered QA &amp; Test Automation
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Quality on<br><span class="gradient-text">Autopilot</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          Self-healing test scripts, autonomous AI agents that explore your product 24/7, and automated test generation that turns requirements into full coverage — without the maintenance burden.
+        </p>
+        <div class="space-y-3 mb-8">
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Playwright, Selenium &amp; Cypress automation frameworks</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Self-healing scripts that adapt to UI changes automatically</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>AI test generation from user stories and requirements</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>API, mobile, performance &amp; load testing coverage</span></div>
+        </div>
+        <a href="#contact" class="btn-primary">Automate Your Testing</a>
+      </div>
+
+      <!-- Image RIGHT -->
+      <div class="reveal img-frame" style="transition-delay:.15s">
+        <div class="feature-img" style="height:440px">
+          <img
+            src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=900&q=80&auto=format&fit=crop"
+            alt="Multiple dark development screens showing automated testing dashboards and CI/CD pipelines"
+            loading="lazy"
+            style="height:440px"
+          >
+          <div class="stat-float" style="bottom:24px;right:24px">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2"><path d="M9 11l3 3L22 4"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">1,247 Tests Passing</div>
+                <div class="text-slate-400 text-xs">0 failures · 97.3% coverage</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURE 3 — CUSTOM SOFTWARE DEVELOPMENT (image LEFT)
+     Image: Colourful code editor close-up — Unsplash (Ilya Pavlov)
+     URL: https://unsplash.com/photos/dccba630e2f6
+     Why: Iconic, richly-lit code on screen — instantly signals
+          professional software engineering and clean architecture.
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-navy relative overflow-hidden">
+  <div class="orb w-[500px] h-[500px] bg-violet-600/5 bottom-[-10%] left-[-5%]"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image LEFT -->
+      <div class="reveal img-frame">
+        <div class="feature-img" style="height:440px">
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&q=80&auto=format&fit=crop"
+            alt="Colourful modern code editor showing custom software development and clean engineering"
+            loading="lazy"
+            style="height:440px"
+          >
+          <div class="stat-float" style="top:24px;left:24px">
+            <div class="flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+              <div>
+                <div class="text-white text-sm font-semibold">Build Passing</div>
+                <div class="text-slate-400 text-xs">All 247 checks green</div>
+              </div>
+            </div>
+          </div>
+          <div class="stat-float" style="bottom:24px;left:24px">
+            <div class="flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <span class="text-white text-xs font-medium">Deployed to Production</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text RIGHT -->
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="glow-pill mb-6" style="color:#a78bfa;border-color:rgba(139,92,246,.3)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+          Custom Software Development
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Products Engineered<br><span style="background:linear-gradient(135deg,#8b5cf6,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">to Scale</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          From idea to production-ready product, our engineers build performant, maintainable web and mobile applications using modern tech stacks — all with AI embedded in the development workflow.
+        </p>
+        <div class="space-y-3 mb-8">
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>React, Next.js, TypeScript — pixel-perfect frontends</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>React Native &amp; Flutter mobile apps for iOS &amp; Android</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Node.js &amp; Python backends with scalable microservices</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>AI-assisted development — 2× faster delivery</span></div>
+        </div>
+        <a href="#contact" class="btn-primary">Discuss Your Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURE 4 — CLOUD & DEVOPS (text LEFT, image RIGHT)
+     Image: Blue-lit server room — Unsplash (imgix)
+     URL: https://unsplash.com/photos/ef010cbdcc31
+     Why: Professionally lit server infrastructure shot with
+          strong blue tones — perfectly matches the brand palette
+          and signals cloud-scale, reliability, and infrastructure.
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-dark relative overflow-hidden">
+  <div class="orb w-[600px] h-[400px] bg-yellow-500/4 top-0 left-0"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Text LEFT -->
+      <div class="reveal">
+        <div class="glow-pill mb-6" style="color:#fde68a;border-color:rgba(234,179,8,.3)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+          Cloud &amp; DevOps Solutions
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Infrastructure Built<br><span style="background:linear-gradient(135deg,#eab308,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">to Last</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          We architect, automate, and manage cloud environments that scale with your business — from zero-downtime CI/CD pipelines to Kubernetes orchestration and infrastructure-as-code.
+        </p>
+        <div class="space-y-3 mb-8">
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>AWS, Azure &amp; GCP architecture and cloud migration</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Docker &amp; Kubernetes containerisation and orchestration</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>CI/CD pipelines with GitHub Actions, Jenkins &amp; ArgoCD</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Infrastructure as code with Terraform &amp; Ansible</span></div>
+        </div>
+        <a href="#contact" class="btn-primary">Scale Your Infrastructure</a>
+      </div>
+
+      <!-- Image RIGHT -->
+      <div class="reveal img-frame" style="transition-delay:.15s">
+        <div class="feature-img" style="height:440px">
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80&auto=format&fit=crop"
+            alt="Blue-lit cloud server infrastructure and data centre representing scalable DevOps solutions"
+            loading="lazy"
+            style="height:440px"
+          >
+          <div class="stat-float" style="bottom:24px;right:24px">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-yellow-500/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">99.9% Uptime</div>
+                <div class="text-slate-400 text-xs">All systems operational</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURE 5 — DATA ANALYTICS & BI (image LEFT)
+     Image: Clean analytics dashboard — Unsplash (Luke Chesser)
+     URL: https://unsplash.com/photos/bebda4e38f71
+     Why: Clean, minimal BI dashboard with graphs and metrics —
+          directly visualises business intelligence and data clarity.
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-navy relative overflow-hidden">
+  <div class="orb w-[500px] h-[400px] bg-pink-500/5 bottom-0 right-0"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image LEFT -->
+      <div class="reveal img-frame">
+        <div class="feature-img" style="height:440px">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80&auto=format&fit=crop"
+            alt="Clean business intelligence dashboard showing analytics, KPIs and real-time data visualisation"
+            loading="lazy"
+            style="height:440px"
+          >
+          <div class="stat-float" style="bottom:24px;left:24px">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-pink-500/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">Revenue +34%</div>
+                <div class="text-slate-400 text-xs">AI-driven insights</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text RIGHT -->
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="glow-pill mb-6" style="color:#f9a8d4;border-color:rgba(236,72,153,.3)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          Data Analytics &amp; Business Intelligence
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Data That Drives<br><span style="background:linear-gradient(135deg,#ec4899,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Real Decisions</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          We build data pipelines, BI dashboards, and predictive AI models that give your leadership team real-time visibility and actionable intelligence to move faster and smarter.
+        </p>
+        <div class="space-y-3 mb-8">
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Interactive Power BI, Tableau &amp; custom dashboards</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>ETL pipelines and automated data warehousing</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Predictive analytics and AI forecasting models</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Real-time reporting with cloud-native data stacks</span></div>
+        </div>
+        <a href="#contact" class="btn-primary">Unlock Your Data</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURE 6 — API DEVELOPMENT & INTEGRATION (text LEFT, image RIGHT)
+     Image: Circuit board macro — Unsplash (Michael Dziedzic)
+     URL: https://unsplash.com/photos/4636190af475
+     Why: Extreme close-up of circuit board traces — signals
+          connectivity, data flow, integration and technical depth.
+          Colourful, premium, non-stock-photo feel.
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-dark relative overflow-hidden">
+  <div class="orb w-[500px] h-[400px] bg-green-500/4 bottom-0 right-0"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Text LEFT -->
+      <div class="reveal">
+        <div class="glow-pill mb-6" style="color:#86efac;border-color:rgba(34,197,94,.3)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 9l3 3-3 3M13 15h3"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+          API Development &amp; Integration
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Connect Everything,<br><span style="background:linear-gradient(135deg,#22c55e,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Seamlessly</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          We design and build robust APIs that power your products and connect your ecosystem — from internal microservices to third-party platforms, payment systems, and AI model endpoints.
+        </p>
+        <div class="space-y-3 mb-8">
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>RESTful &amp; GraphQL APIs with full documentation</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Third-party integrations: Stripe, Salesforce, HubSpot &amp; more</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Microservices architecture and event-driven systems</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Webhook pipelines, real-time data sync &amp; AI API wrappers</span></div>
+        </div>
+        <a href="#contact" class="btn-primary">Build Your API</a>
+      </div>
+
+      <!-- Image RIGHT -->
+      <div class="reveal img-frame" style="transition-delay:.15s">
+        <div class="feature-img" style="height:440px">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80&auto=format&fit=crop"
+            alt="Circuit board macro photography representing API connectivity, data integration and microservices architecture"
+            loading="lazy"
+            style="height:440px"
+          >
+          <div class="stat-float" style="bottom:24px;right:24px">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-green-500/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">12 APIs Connected</div>
+                <div class="text-slate-400 text-xs">99.8ms avg response</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURE 7 — TECH CONSULTING (image LEFT)
+     Image: Futuristic tech strategy — Unsplash (Myriam Jessier)
+     URL: https://unsplash.com/photos/eveI7MOcSmw
+     Why: Screens with analytics and strategic data — signals
+          digital transformation, enterprise roadmapping, and
+          technology leadership without generic stock aesthetics.
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-navy relative overflow-hidden">
+  <div class="orb w-[600px] h-[400px] bg-teal-500/5 top-0 left-0"></div>
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image LEFT -->
+      <div class="reveal img-frame">
+        <div class="feature-img" style="height:440px">
+          <img
+            src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&q=80&auto=format&fit=crop"
+            alt="Digital strategy and technology consulting showing enterprise architecture and transformation roadmaps"
+            loading="lazy"
+            style="height:440px"
+          >
+          <div class="stat-float" style="top:24px;left:24px">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-teal-500/20 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">Roadmap Delivered</div>
+                <div class="text-slate-400 text-xs">12-month AI strategy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text RIGHT -->
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="glow-pill mb-6" style="color:#5eead4;border-color:rgba(20,184,166,.3)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Technology Consulting &amp; Digital Transformation
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Strategy That Turns<br><span style="background:linear-gradient(135deg,#14b8a6,#3B82F6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Vision into Results</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          Our senior engineers work alongside your leadership to define technology roadmaps, drive AI adoption, modernise legacy systems, and turn digital transformation from a buzzword into measurable outcomes.
+        </p>
+        <div class="space-y-3 mb-8">
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>AI adoption strategy and implementation roadmaps</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Architecture reviews and tech stack modernisation</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>CTO-as-a-service and fractional technical leadership</span></div>
+          <div class="check-item"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div><span>Legacy system migration and platform re-engineering</span></div>
+        </div>
+        <a href="#book" class="btn-primary">Book a Strategy Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- ════════════════════════════════════════════════════════
+     FUTURE OF QA
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-dark relative overflow-hidden">
+  <div class="orb w-[500px] h-[500px] bg-cyan-600/4 bottom-[-10%] right-[-5%]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-16 reveal">
+      <div class="badge badge-cyan mb-4">The AI Advantage</div>
+      <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-4">
+        How We Embed AI Across <span class="gradient-text">Every Engagement</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        AI is not a feature we add on top — it's built into how we develop, test, deploy, and analyse from day one.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+      <!-- Card 1 — AI-Accelerated Development -->
+      <div class="service-card overflow-hidden reveal group" style="padding:0">
+        <div class="relative overflow-hidden" style="height:200px">
+          <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=800&q=80&auto=format&fit=crop"
+               alt="Code on dark screen — AI-accelerated development" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/30 to-transparent"></div>
+          <!-- Icon badge over image -->
+          <div class="absolute bottom-4 left-5 w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/30 to-cyan-500/30 backdrop-blur-sm border border-blue-500/30 flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <defs><linearGradient id="fg1b" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs>
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="url(#fg1b)"/>
+              <path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3" stroke="url(#fg1b)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white text-xl mb-2">AI-Accelerated Development</h3>
+          <p class="text-slate-400 leading-relaxed">From code generation to automated code review and test creation — we use AI at every stage of software development, cutting delivery time significantly without sacrificing quality.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 — Autonomous AI Agents -->
+      <div class="service-card overflow-hidden reveal group" style="padding:0;transition-delay:.1s">
+        <div class="relative overflow-hidden" style="height:200px">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop"
+               alt="AI neural network visualization — autonomous agents" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/30 to-transparent"></div>
+          <div class="absolute bottom-4 left-5 w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500/30 to-blue-500/30 backdrop-blur-sm border border-purple-500/30 flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white text-xl mb-2">Autonomous AI Agents</h3>
+          <p class="text-slate-400 leading-relaxed">We deploy multi-agent systems that operate continuously — handling QA, customer support, data processing, and business workflows autonomously, 24/7, without constant human oversight.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 — Intelligent Automation -->
+      <div class="service-card overflow-hidden reveal group" style="padding:0;transition-delay:.15s">
+        <div class="relative overflow-hidden" style="height:200px">
+          <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&q=80&auto=format&fit=crop"
+               alt="Robotic precision arm — intelligent automation" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/30 to-transparent"></div>
+          <div class="absolute bottom-4 left-5 w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/30 to-green-500/30 backdrop-blur-sm border border-cyan-500/30 flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2">
+              <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
+              <polyline points="17,21 17,13 7,13 7,21"/><polyline points="7,3 7,8 15,8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white text-xl mb-2">Intelligent Automation</h3>
+          <p class="text-slate-400 leading-relaxed">Self-healing test scripts, smart CI/CD pipelines, and AI-driven DevOps monitoring that adapt automatically — reducing toil, cutting maintenance costs, and keeping systems healthy.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 — Predictive Data & Analytics -->
+      <div class="service-card overflow-hidden reveal group" style="padding:0;transition-delay:.2s">
+        <div class="relative overflow-hidden" style="height:200px">
+          <img src="https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=800&q=80&auto=format&fit=crop"
+               alt="Data chart screens — predictive analytics" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/30 to-transparent"></div>
+          <div class="absolute bottom-4 left-5 w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500/30 to-red-500/30 backdrop-blur-sm border border-orange-500/30 flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-semibold text-white text-xl mb-2">Predictive Data &amp; Analytics</h3>
+          <p class="text-slate-400 leading-relaxed">AI-powered dashboards and forecasting models that surface patterns in your business data — turning raw numbers into decisions that drive revenue, reduce churn, and optimise operations.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════════════════════════════ -->
+<section id="why-us" class="py-28 bg-navy">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-16 reveal">
+      <div class="badge mb-4">Why Hexura Tech</div>
+      <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-4">
+        Built for Teams That <span class="gradient-text">Ship Fast</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">
+        We don't just deliver projects. We become a long-term technology partner invested in your success.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <div class="service-card text-center reveal">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/12 to-cyan-500/12 border border-blue-500/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Faster Time to Market</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Agile delivery and AI-powered workflows help your product go from idea to launch significantly faster.</p>
+      </div>
+
+      <div class="service-card text-center reveal" style="transition-delay:.08s">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/12 to-blue-500/12 border border-purple-500/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2">
+            <path d="M12 2a10 10 0 110 20 10 10 0 010-20zM8 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">AI-Powered Delivery</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">We embed AI across development, automation, and operations to build smarter, faster, and at lower cost.</p>
+      </div>
+
+      <div class="service-card text-center reveal" style="transition-delay:.16s">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500/12 to-cyan-500/12 border border-green-500/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Cost-Efficient Delivery</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Smart automation and lean engineering practices cut operational overhead without cutting corners.</p>
+      </div>
+
+      <div class="service-card text-center reveal" style="transition-delay:.24s">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/12 to-red-500/12 border border-orange-500/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Senior Engineers Only</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Every project is handled by experienced engineers with deep expertise across web, mobile, cloud, and AI.</p>
+      </div>
+
+      <div class="service-card text-center reveal" style="transition-delay:.08s">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/12 to-blue-500/12 border border-cyan-500/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Scalable Solutions</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">From MVP to enterprise scale, our tech solutions grow with your business at every stage.</p>
+      </div>
+
+      <div class="service-card text-center reveal" style="transition-delay:.16s">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/12 to-purple-500/12 border border-blue-500/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+            <path d="M9 17H7A5 5 0 017 7h2M15 7h2a5 5 0 010 10h-2M8 12h8"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Flexible Engagement</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Project-based, retainer, or embedded team — choose the model that fits your workflow and budget.</p>
+      </div>
+
+      <div class="service-card text-center reveal" style="transition-delay:.24s">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/12 to-green-500/12 border border-cyan-500/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Full Transparency</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Regular updates, live dashboards, and clear documentation so you always know where your project stands.</p>
+      </div>
+
+      <div class="service-card text-center reveal" style="transition-delay:.32s">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/12 to-pink-500/12 border border-purple-500/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Startup to Enterprise</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">We adapt to your pace — whether you're launching your first product or scaling a complex enterprise platform.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     PROCESS
+════════════════════════════════════════════════════════ -->
+<section id="process" class="py-28 bg-dark relative overflow-hidden">
+  <div class="orb w-[600px] h-[400px] bg-blue-600/5 top-0 left-1/2 -translate-x-1/2"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
+
+    <div class="text-center mb-20 reveal">
+      <div class="badge mb-4">Our Process</div>
+      <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-4">
+        How We <span class="gradient-text">Work</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">
+        A structured, transparent process that takes your idea from discovery to a live, scalable product.
+      </p>
+    </div>
+
+    <!-- Desktop: 5 image cards -->
+    <div class="hidden lg:grid grid-cols-5 gap-5">
+
+      <!-- Step 01 — Discovery -->
+      <div class="reveal flex flex-col rounded-2xl overflow-hidden border border-white/8 bg-white/3 hover:border-blue-500/30 transition-colors duration-300" style="transition-delay:0s">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=500&q=80&auto=format&fit=crop"
+               alt="Discovery — laptop and notebook research" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/70 via-transparent to-transparent"></div>
+        </div>
+        <!-- Numbered tab sitting flush below image -->
+        <div class="flex items-center justify-center gap-2 py-3 border-b border-white/6 bg-gradient-to-r from-blue-600/15 to-cyan-600/15">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">1</span>
+          <span class="text-white font-semibold text-sm">Discovery</span>
+        </div>
+        <div class="px-4 py-4 flex-1">
+          <p class="text-slate-400 text-xs leading-relaxed text-center">We learn your business goals, tech landscape, and project requirements inside out.</p>
+        </div>
+      </div>
+
+      <!-- Step 02 — Strategy & Planning -->
+      <div class="reveal flex flex-col rounded-2xl overflow-hidden border border-white/8 bg-white/3 hover:border-blue-500/30 transition-colors duration-300" style="transition-delay:.1s">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80&auto=format&fit=crop"
+               alt="Strategy and planning documents on desk" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/70 via-transparent to-transparent"></div>
+        </div>
+        <div class="flex items-center justify-center gap-2 py-3 border-b border-white/6 bg-gradient-to-r from-blue-600/15 to-cyan-600/15">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">2</span>
+          <span class="text-white font-semibold text-sm">Strategy &amp; Planning</span>
+        </div>
+        <div class="px-4 py-4 flex-1">
+          <p class="text-slate-400 text-xs leading-relaxed text-center">A tailored roadmap covering architecture, timelines, tech stack, and delivery milestones.</p>
+        </div>
+      </div>
+
+      <!-- Step 03 — Build & Execute -->
+      <div class="reveal flex flex-col rounded-2xl overflow-hidden border border-white/8 bg-white/3 hover:border-cyan-500/30 transition-colors duration-300" style="transition-delay:.2s">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&q=80&auto=format&fit=crop"
+               alt="Code on dark laptop screen — building and executing" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/70 via-transparent to-transparent"></div>
+        </div>
+        <div class="flex items-center justify-center gap-2 py-3 border-b border-white/6 bg-gradient-to-r from-cyan-600/20 to-blue-600/10">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">3</span>
+          <span class="text-white font-semibold text-sm">Build &amp; Execute</span>
+        </div>
+        <div class="px-4 py-4 flex-1">
+          <p class="text-slate-400 text-xs leading-relaxed text-center">Our engineers design, develop, automate, and deploy — iterating fast with full transparency.</p>
+        </div>
+      </div>
+
+      <!-- Step 04 — Review & Deliver -->
+      <div class="reveal flex flex-col rounded-2xl overflow-hidden border border-white/8 bg-white/3 hover:border-blue-500/30 transition-colors duration-300" style="transition-delay:.3s">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&q=80&auto=format&fit=crop"
+               alt="Analytics dashboard review and delivery" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/70 via-transparent to-transparent"></div>
+        </div>
+        <div class="flex items-center justify-center gap-2 py-3 border-b border-white/6 bg-gradient-to-r from-blue-600/15 to-cyan-600/15">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">4</span>
+          <span class="text-white font-semibold text-sm">Review &amp; Deliver</span>
+        </div>
+        <div class="px-4 py-4 flex-1">
+          <p class="text-slate-400 text-xs leading-relaxed text-center">Detailed progress updates, demos, and handover documentation at every milestone.</p>
+        </div>
+      </div>
+
+      <!-- Step 05 — Scale & Optimise -->
+      <div class="reveal flex flex-col rounded-2xl overflow-hidden border border-white/8 bg-white/3 hover:border-blue-500/30 transition-colors duration-300" style="transition-delay:.4s">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500&q=80&auto=format&fit=crop"
+               alt="Growth metrics chart — scale and optimise" loading="lazy"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/70 via-transparent to-transparent"></div>
+        </div>
+        <div class="flex items-center justify-center gap-2 py-3 border-b border-white/6 bg-gradient-to-r from-blue-600/15 to-cyan-600/15">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">5</span>
+          <span class="text-white font-semibold text-sm">Scale &amp; Optimise</span>
+        </div>
+        <div class="px-4 py-4 flex-1">
+          <p class="text-slate-400 text-xs leading-relaxed text-center">Ongoing support, performance tuning, and continuous improvement as your product grows.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mobile: stacked image cards -->
+    <div class="lg:hidden space-y-4">
+
+      <div class="reveal rounded-2xl overflow-hidden border border-white/8 bg-white/3">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80&auto=format&fit=crop"
+               alt="Discovery — laptop and notebook" loading="lazy" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/20 to-transparent"></div>
+        </div>
+        <div class="flex items-center gap-3 px-5 py-3 border-b border-white/6 bg-gradient-to-r from-blue-600/15 to-cyan-600/15">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">1</span>
+          <span class="text-white font-semibold text-sm">Discovery</span>
+        </div>
+        <p class="text-slate-400 text-sm px-5 py-4">We learn your business goals, tech landscape, and project requirements inside out.</p>
+      </div>
+
+      <div class="reveal rounded-2xl overflow-hidden border border-white/8 bg-white/3">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop"
+               alt="Strategy planning documents" loading="lazy" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/20 to-transparent"></div>
+        </div>
+        <div class="flex items-center gap-3 px-5 py-3 border-b border-white/6 bg-gradient-to-r from-blue-600/15 to-cyan-600/15">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">2</span>
+          <span class="text-white font-semibold text-sm">Strategy &amp; Planning</span>
+        </div>
+        <p class="text-slate-400 text-sm px-5 py-4">A tailored roadmap covering architecture, timelines, tech stack, and delivery milestones.</p>
+      </div>
+
+      <div class="reveal rounded-2xl overflow-hidden border border-white/8 bg-white/3">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80&auto=format&fit=crop"
+               alt="Code on screen — build and execute" loading="lazy" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/20 to-transparent"></div>
+        </div>
+        <div class="flex items-center gap-3 px-5 py-3 border-b border-white/6 bg-gradient-to-r from-cyan-600/20 to-blue-600/10">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">3</span>
+          <span class="text-white font-semibold text-sm">Build &amp; Execute</span>
+        </div>
+        <p class="text-slate-400 text-sm px-5 py-4">Our engineers design, develop, automate, and deploy — iterating fast with full transparency.</p>
+      </div>
+
+      <div class="reveal rounded-2xl overflow-hidden border border-white/8 bg-white/3">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80&auto=format&fit=crop"
+               alt="Analytics dashboard review" loading="lazy" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/20 to-transparent"></div>
+        </div>
+        <div class="flex items-center gap-3 px-5 py-3 border-b border-white/6 bg-gradient-to-r from-blue-600/15 to-cyan-600/15">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">4</span>
+          <span class="text-white font-semibold text-sm">Review &amp; Deliver</span>
+        </div>
+        <p class="text-slate-400 text-sm px-5 py-4">Detailed progress updates, demos, and handover documentation at every milestone.</p>
+      </div>
+
+      <div class="reveal rounded-2xl overflow-hidden border border-white/8 bg-white/3">
+        <div class="relative overflow-hidden" style="height:180px">
+          <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&q=80&auto=format&fit=crop"
+               alt="Growth metrics — scale and optimise" loading="lazy" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d1526]/90 via-[#0d1526]/20 to-transparent"></div>
+        </div>
+        <div class="flex items-center gap-3 px-5 py-3 border-b border-white/6 bg-gradient-to-r from-blue-600/15 to-cyan-600/15">
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">5</span>
+          <span class="text-white font-semibold text-sm">Scale &amp; Optimise</span>
+        </div>
+        <p class="text-slate-400 text-sm px-5 py-4">Ongoing support, performance tuning, and continuous improvement as your product grows.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     TECHNOLOGIES
+════════════════════════════════════════════════════════ -->
+<section class="py-28 bg-navy">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-16 reveal">
+      <div class="badge mb-4">Technology Stack</div>
+      <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-4">
+        Tools We <span class="gradient-text">Master</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">
+        A powerful tech stack spanning web, mobile, DevOps, QA, and AI. everything we need to build, test, and scale your product.
+      </p>
+    </div>
+
+    <!-- Web & Mobile Dev Tools -->
+    <div class="mb-10 reveal">
+      <p class="text-slate-500 text-[11px] font-semibold uppercase tracking-widest mb-5 text-center">Web &amp; Mobile Development</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="tech-tag">⚛️ React</span>
+        <span class="tech-tag">▲ Next.js</span>
+        <span class="tech-tag">🟢 Node.js</span>
+        <span class="tech-tag">🌐 TypeScript</span>
+        <span class="tech-tag">🎨 Tailwind CSS</span>
+        <span class="tech-tag">📱 React Native</span>
+        <span class="tech-tag">🦋 Flutter</span>
+        <span class="tech-tag">🍎 Swift / iOS</span>
+        <span class="tech-tag">🤖 Kotlin / Android</span>
+        <span class="tech-tag">🐍 Python</span>
+        <span class="tech-tag">🗄️ PostgreSQL</span>
+        <span class="tech-tag">🔥 Firebase</span>
+      </div>
+    </div>
+
+    <!-- DevOps Tools -->
+    <div class="mb-10 reveal" style="transition-delay:.1s">
+      <p class="text-slate-500 text-[11px] font-semibold uppercase tracking-widest mb-5 text-center">DevOps &amp; Cloud</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="tech-tag">🐳 Docker</span>
+        <span class="tech-tag">☸️ Kubernetes</span>
+        <span class="tech-tag">☁️ AWS</span>
+        <span class="tech-tag">🔵 Azure</span>
+        <span class="tech-tag">🟡 GCP</span>
+        <span class="tech-tag">⚙️ GitHub Actions</span>
+        <span class="tech-tag">🔧 Jenkins</span>
+        <span class="tech-tag">📦 Terraform</span>
+        <span class="tech-tag">🔀 CI/CD Pipelines</span>
+        <span class="tech-tag">📊 Grafana</span>
+        <span class="tech-tag">🔍 Datadog</span>
+      </div>
+    </div>
+
+    <!-- QA Tools -->
+    <div class="mb-10 reveal" style="transition-delay:.2s">
+      <p class="text-slate-500 text-[11px] font-semibold uppercase tracking-widest mb-5 text-center">QA &amp; Test Automation</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#43B02A"><circle cx="12" cy="12" r="10"/><path d="M7 12l3 3 7-7" stroke="white" stroke-width="2" fill="none"/></svg>
+          Selenium
+        </span>
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2"><path d="M12 2l9 5v10l-9 5-9-5V7z"/></svg>
+          Playwright
+        </span>
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          Cypress
+        </span>
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+          Appium
+        </span>
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          Postman
+        </span>
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          JMeter
+        </span>
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          BrowserStack
+        </span>
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>
+          Jira
+        </span>
+        <span class="tech-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0078d4" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Azure DevOps
+        </span>
+      </div>
+    </div>
+
+    <!-- AI Tools -->
+    <div class="reveal" style="transition-delay:.3s">
+      <p class="text-slate-500 text-[11px] font-semibold uppercase tracking-widest mb-5 text-center">AI &amp; Modern Engineering</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="tech-tag tech-tag-ai">✦ OpenAI</span>
+        <span class="tech-tag tech-tag-ai">◈ Claude AI</span>
+        <span class="tech-tag tech-tag-ai">⛓ LangChain</span>
+        <span class="tech-tag tech-tag-ai">⚙ CrewAI</span>
+        <span class="tech-tag tech-tag-ai">🤖 AutoGen</span>
+        <span class="tech-tag tech-tag-ai">◎ GitHub Copilot</span>
+        <span class="tech-tag tech-tag-ai">⬡ MCP Servers</span>
+        <span class="tech-tag tech-tag-ai">◐ AI Agents</span>
+        <span class="tech-tag tech-tag-ai">🔗 RAG Pipelines</span>
+        <span class="tech-tag tech-tag-ai">🧠 Vector DBs</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════ -->
+<section id="about" class="py-28 bg-dark">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left -->
+      <div class="reveal">
+        <div class="badge mb-6">About Hexura Tech</div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Technology That Works <span class="gradient-text">As Hard As You Do</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-5">
+          Hexura Tech is an AI-first technology consultancy helping businesses build smarter, ship faster, and scale with confidence. We combine deep engineering expertise with cutting-edge AI to deliver automation, software, cloud, data, and quality engineering solutions under one roof.
+        </p>
+        <p class="text-slate-400 leading-relaxed mb-10">
+          Whether you're a startup looking to automate your first workflows or an enterprise undergoing digital transformation, our senior engineers become a trusted extension of your team — from strategy to production, every step of the way.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="glass rounded-xl p-5">
+            <div class="font-display font-black text-2xl gradient-text mb-1">50+</div>
+            <div class="text-sm text-slate-400">Projects Delivered</div>
+          </div>
+          <div class="glass rounded-xl p-5">
+            <div class="font-display font-black text-2xl gradient-text mb-1">30+</div>
+            <div class="text-sm text-slate-400">Happy Clients</div>
+          </div>
+          <div class="glass rounded-xl p-5">
+            <div class="font-display font-black text-2xl gradient-text mb-1">5+</div>
+            <div class="text-sm text-slate-400">Years of Expertise</div>
+          </div>
+          <div class="glass rounded-xl p-5">
+            <div class="font-display font-black text-2xl gradient-text mb-1">98<span style="-webkit-text-fill-color:#06b6d4;color:#06b6d4">%</span></div>
+            <div class="text-sm text-slate-400">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right. code card -->
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="gradient-border-mid rounded-2xl overflow-hidden">
+          <div class="bg-mid p-6">
+            <!-- Window chrome -->
+            <div class="flex items-center gap-2 mb-5">
+              <div class="w-3 h-3 rounded-full bg-red-400/80"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-400/80"></div>
+              <div class="w-3 h-3 rounded-full bg-green-400/80"></div>
+              <span class="text-slate-500 text-xs ml-3 font-mono">hexura-agent.ts</span>
+            </div>
+            <!-- Code -->
+            <pre class="code-block text-slate-300 overflow-x-auto"><code><span class="text-blue-400">import</span> { <span class="text-cyan-300">QAAgent</span> } <span class="text-blue-400">from</span> <span class="text-yellow-300">"@hexura/ai-agents"</span>;
+
+<span class="text-blue-400">const</span> <span class="text-cyan-300">agent</span> = <span class="text-blue-400">new</span> <span class="text-green-400">QAAgent</span>({
+  model:  <span class="text-yellow-300">"claude-opus-4"</span>,
+  mode:   <span class="text-yellow-300">"autonomous"</span>,
+  tools: [
+    <span class="text-yellow-300">"test-generation"</span>,
+    <span class="text-yellow-300">"self-healing"</span>,
+    <span class="text-yellow-300">"bug-discovery"</span>,
+    <span class="text-yellow-300">"perf-analysis"</span>,
+  ],
+});
+
+<span class="text-blue-400">const</span> result = <span class="text-blue-400">await</span> agent.<span class="text-green-400">run</span>({
+  target:   <span class="text-yellow-300">"production"</span>,
+  coverage: <span class="text-yellow-300">"full"</span>,
+  report:   <span class="text-blue-400">true</span>,
+});
+
+<span class="text-slate-500">// ✓  1,247 tests passing</span>
+<span class="text-slate-500">// ✓  0 critical issues found</span>
+<span class="text-slate-500">// ✓  Coverage: 97.3%</span>
+<span class="text-green-400">// 🚀 Ready to ship!</span></code></pre>
+            <!-- Status bar -->
+            <div class="mt-5 pt-4 border-t border-white/5 flex items-center gap-3">
+              <span class="inline-flex items-center gap-1.5 text-xs text-green-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                Agent running
+              </span>
+              <span class="text-slate-600 text-xs">·</span>
+              <span class="text-xs text-slate-500">Completed in 2m 14s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     BOOK A CALL
+════════════════════════════════════════════════════════ -->
+<section id="book" class="py-28 bg-dark relative overflow-hidden">
+  <div class="orb w-[500px] h-[300px] bg-cyan-500/5 top-0 right-0"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left. copy -->
+      <div class="reveal">
+        <div class="badge badge-cyan mb-6">Book a Call</div>
+        <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          Let's Talk About <span class="gradient-text">Your Project</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          Schedule a free 30-minute discovery call with our team. We'll listen to your challenges, ask the right questions, and tell you exactly how we can help. no sales pitch, just straight talk.
+        </p>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-1">30-Minute Discovery Call</div>
+              <div class="text-slate-400 text-sm">A focused session to understand your needs and define the right approach.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2">
+                <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-1">Free. No Commitment</div>
+              <div class="text-slate-400 text-sm">No pressure, no obligation. Just an honest conversation about how we can help.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-1">Talk to a Real Expert</div>
+              <div class="text-slate-400 text-sm">You'll speak directly with a senior engineer. not a salesperson.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fallback CTA if Calendly not set up yet -->
+        <a href="#contact" class="btn-outline">
+          Prefer email instead? Contact us below
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right. Calendly embed -->
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="glass rounded-2xl overflow-hidden" style="min-height:560px;">
+          <!-- Calendly inline widget -->
+          <div id="calendly-container" class="w-full h-full" style="min-height:560px;">
+            <!-- Replace YOUR_CALENDLY_URL below with your actual Calendly link e.g. https://calendly.com/hexura-tech/30min -->
+            <div id="calendly-placeholder" class="flex flex-col items-center justify-center h-full py-16 px-8 text-center" style="min-height:560px;">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center mb-6">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <defs><linearGradient id="calGrad" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs>
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="url(#calGrad)"/>
+                  <path d="M16 2v4M8 2v4M3 10h18" stroke="url(#calGrad)"/>
+                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" stroke="url(#calGrad)" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="font-display font-bold text-white text-xl mb-3">Schedule Your Free Call</h3>
+              <p class="text-slate-400 text-sm mb-6 leading-relaxed">Click below to pick a time that works for you. We'll send a calendar invite with a video call link.</p>
+              <a id="calendly-btn" href="https://calendly.com/d/ds6q-jtf-3dm/discovery-call" target="_blank" class="btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+                </svg>
+                Open Booking Calendar
+              </a>
+              <p class="text-slate-500 text-xs mt-4">Powered by Calendly · Free · No sign-in required</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════ -->
+<section id="contact" class="py-28 bg-navy relative overflow-hidden">
+  <div class="orb w-[600px] h-[600px] bg-blue-500/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-16 reveal">
+      <div class="badge mb-4">Get In Touch</div>
+      <h2 class="font-display text-4xl md:text-5xl font-black text-white mb-4">
+        Let's Build Something <span class="gradient-text">Remarkable Together</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">
+        Tell us about your project and we'll get back to you within 24 hours with a clear plan forward.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+
+      <!-- Form -->
+      <div class="lg:col-span-3 reveal">
+        <div class="glass rounded-2xl p-8">
+          <form id="contact-form" novalidate>
+            <input type="hidden" name="access_key" id="w3f-key" value="">
+            <input type="hidden" name="subject" value="New Enquiry from Hexura Tech Website">
+            <input type="hidden" name="from_name" value="Hexura Tech Contact Form">
+            <input type="checkbox" name="botcheck" style="display:none">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">Full Name <span class="text-red-400">*</span></label>
+                <input type="text" name="name" id="field-name" class="form-input" placeholder="John Smith">
+                <p class="text-red-400 text-xs mt-1 hidden" id="err-name">Please enter your full name.</p>
+              </div>
+              <div>
+                <label class="block text-sm text-slate-400 mb-2">Email Address <span class="text-red-400">*</span></label>
+                <input type="email" name="email" id="field-email" class="form-input" placeholder="john@company.com">
+                <p class="text-red-400 text-xs mt-1 hidden" id="err-email">Please enter a valid email address.</p>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm text-slate-400 mb-2">Company</label>
+              <input type="text" name="company" class="form-input" placeholder="Your Company Name">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm text-slate-400 mb-2">Service Needed <span class="text-red-400">*</span></label>
+              <select name="service" id="field-service" class="form-input">
+                <option value="">Select a service…</option>
+                <option>AI Agents &amp; Business Automation</option>
+                <option>AI-Powered QA &amp; Test Automation</option>
+                <option>Custom Software Development</option>
+                <option>Cloud &amp; DevOps Solutions</option>
+                <option>API Development &amp; Integration</option>
+                <option>Data Analytics &amp; Business Intelligence</option>
+                <option>Technology Consulting &amp; Digital Transformation</option>
+                <option>Other / Not Sure Yet</option>
+              </select>
+              <p class="text-red-400 text-xs mt-1 hidden" id="err-service">Please select a service.</p>
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm text-slate-400 mb-2">Tell Us About Your Project <span class="text-red-400">*</span></label>
+              <textarea name="message" id="field-message" class="form-input" rows="4" placeholder="Describe your project, team size, tech stack, and what you're looking to achieve…"></textarea>
+              <p class="text-red-400 text-xs mt-1 hidden" id="err-message">Please tell us about your project.</p>
+            </div>
+            <button type="submit" class="btn-primary w-full justify-center" id="submit-btn">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/>
+              </svg>
+            </button>
+            <p id="form-success" class="hidden text-center text-green-400 text-sm mt-4 font-medium">✓ Message sent! We'll get back to you within 24 hours.</p>
+            <p id="form-error" class="hidden text-center text-red-400 text-sm mt-4">Something went wrong. Please email us directly at hello@hexura.tech</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="lg:col-span-2 reveal space-y-4" style="transition-delay:.15s">
+
+        <div class="glass rounded-xl p-5">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500 mb-0.5">Email</div>
+              <a href="mailto:hello@hexura.tech" class="text-white font-medium text-sm hover:text-blue-400 transition-colors">hello@hexura.tech</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span class="text-green-400 text-sm font-medium">Available for new projects</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">We typically respond within 24 hours. Drop us an email and we'll get back to you shortly.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="bg-dark border-t border-white/5 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+      <!-- Brand -->
+      <div class="sm:col-span-2">
+        <a href="#home" class="flex items-center gap-3 mb-5">
+          <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ftLogoGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#3B82F6"/>
+                <stop offset="100%" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" fill="url(#ftLogoGrad)" opacity="0.12"/>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" stroke="url(#ftLogoGrad)" stroke-width="1.4" fill="none"/>
+            <path d="M13 12.5V25.5M13 19H25M25 12.5V25.5" stroke="url(#ftLogoGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-display font-extrabold text-lg text-white">Hexura<span class="gradient-text"> Tech</span></span>
+        </a>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-xs mb-6">
+          AI-first technology consultancy helping businesses build smarter with AI agents, automation, software engineering, cloud, data, and quality engineering.
+        </p>
+        <!-- Social icons will be added once links are finalised -->
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="font-semibold text-white mb-5 text-sm">Services</h4>
+        <ul class="space-y-3">
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-white transition-colors link-hover">AI Agents &amp; Automation</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-white transition-colors link-hover">Custom Software Development</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-white transition-colors link-hover">Cloud &amp; DevOps</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-white transition-colors link-hover">Data Analytics &amp; BI</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-white transition-colors link-hover">Tech Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="font-semibold text-white mb-5 text-sm">Company</h4>
+        <ul class="space-y-3">
+          <li><a href="#about"   class="text-slate-400 text-sm hover:text-white transition-colors link-hover">About Us</a></li>
+          <li><a href="#why-us"  class="text-slate-400 text-sm hover:text-white transition-colors link-hover">Why Hexura</a></li>
+          <li><a href="#process" class="text-slate-400 text-sm hover:text-white transition-colors link-hover">Our Process</a></li>
+          <li><a href="#book"    class="text-slate-400 text-sm hover:text-white transition-colors link-hover">Book a Call</a></li>
+          <li><a href="#contact" class="text-slate-400 text-sm hover:text-white transition-colors link-hover">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="divider mb-8"></div>
+
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-slate-500 text-sm">© 2026 Hexura Tech. All rights reserved.</p>
+      <p class="text-slate-500 text-sm">
+        Crafted with precision &amp; powered by AI ·
+        <a href="https://www.hexura.tech" class="hover:text-slate-300 transition-colors">www.hexura.tech</a>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════════ -->
+<script>
+  /* ── Nav scroll ── */
+  const navbar = document.getElementById('navbar');
+  const onScroll = () => {
+    navbar.classList.toggle('nav-scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ── Mobile menu ── */
+  const menuBtn    = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => mobileMenu.classList.remove('open'))
+  );
+
+  /* ── Smooth scroll ── */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ── Scroll reveal ── */
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  /* ── Hero canvas. animated network nodes ── */
+  (function() {
+    const canvas = document.getElementById('hero-canvas');
+    const ctx    = canvas.getContext('2d');
+    let W, H, nodes;
+    const NODE_COUNT = 65;
+    const MAX_DIST   = 130;
+
+    function setup() {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+      nodes = Array.from({ length: NODE_COUNT }, () => ({
+        x:  Math.random() * W,
+        y:  Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.38,
+        vy: (Math.random() - 0.5) * 0.38,
+        r:  Math.random() * 1.8 + 0.8,
+        op: Math.random() * 0.45 + 0.1,
+      }));
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+
+      // Connections
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const d  = Math.sqrt(dx * dx + dy * dy);
+          if (d < MAX_DIST) {
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = `rgba(59,130,246,${(1 - d / MAX_DIST) * 0.14})`;
+            ctx.lineWidth   = 0.6;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Nodes
+      nodes.forEach(n => {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(59,130,246,${n.op})`;
+        ctx.fill();
+
+        // Move
+        n.x += n.vx; n.y += n.vy;
+        if (n.x < 0 || n.x > W) n.vx *= -1;
+        if (n.y < 0 || n.y > H) n.vy *= -1;
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    setup();
+    draw();
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(setup, 200);
+    });
+  })();
+
+  /* ── Contact form. validation + Web3Forms submission ── */
+  document.getElementById('contact-form').addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const name    = document.getElementById('field-name');
+    const email   = document.getElementById('field-email');
+    const service = document.getElementById('field-service');
+    const message = document.getElementById('field-message');
+    const btn     = document.getElementById('submit-btn');
+    const success = document.getElementById('form-success');
+    const errBox  = document.getElementById('form-error');
+
+    // Hide previous messages
+    success.classList.add('hidden');
+    errBox.classList.add('hidden');
+
+    // Validation helpers
+    const showErr = (id) => document.getElementById(id).classList.remove('hidden');
+    const hideErr = (id) => document.getElementById(id).classList.add('hidden');
+    const setErr  = (el, errId) => { el.style.borderColor = 'rgba(248,113,113,.5)'; showErr(errId); };
+    const clearErr= (el, errId) => { el.style.borderColor = ''; hideErr(errId); };
+
+    let valid = true;
+
+    // Name
+    if (!name.value.trim() || name.value.trim().length < 2) {
+      setErr(name, 'err-name'); valid = false;
+    } else { clearErr(name, 'err-name'); }
+
+    // Email
+    const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRx.test(email.value.trim())) {
+      setErr(email, 'err-email'); valid = false;
+    } else { clearErr(email, 'err-email'); }
+
+    // Service
+    if (!service.value) {
+      setErr(service, 'err-service'); valid = false;
+    } else { clearErr(service, 'err-service'); }
+
+    // Message
+    if (!message.value.trim() || message.value.trim().length < 10) {
+      setErr(message, 'err-message'); valid = false;
+    } else { clearErr(message, 'err-message'); }
+
+    if (!valid) return;
+
+    // Submit to Web3Forms
+    btn.innerHTML = 'Sending…';
+    btn.disabled  = true;
+
+    try {
+      const formData = new FormData(e.target);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        btn.innerHTML = '✓ Message Sent!';
+        btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+        success.classList.remove('hidden');
+        e.target.reset();
+        setTimeout(() => {
+          btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>';
+          btn.style.background = '';
+          btn.disabled = false;
+          success.classList.add('hidden');
+        }, 5000);
+      } else {
+        throw new Error('Failed');
+      }
+    } catch {
+      btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>';
+      btn.style.background = '';
+      btn.disabled = false;
+      errBox.classList.remove('hidden');
+    }
+  });
+
+</script>
+
+<script src="config.js"></script>
+<script>
+  // Set Web3Forms key from config file
+  const w3fKey = document.getElementById('w3f-key');
+  if (w3fKey && typeof HEXURA_CONFIG !== 'undefined') {
+    w3fKey.value = HEXURA_CONFIG.web3formsKey;
+  }
+</script>
+</body>
+</html>
