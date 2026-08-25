@@ -24,7 +24,14 @@
 
   <url>
     <loc>https://www.hexura.tech/#ai-agents</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hexura.tech/#qa</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
