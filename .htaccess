@@ -10,6 +10,23 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^hexura\.tech$ [NC]
 RewriteRule ^(.*)$ https://www.hexura.tech/$1 [L,R=301]
 
+# ─── Clean URLs (remove .html extension) ────────────────────────────────────
+
+# Redirect requests that still include .html to the extension-less URL
+# e.g. /portfolio.html -> /portfolio, /index.html -> /
+RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.html[?\s] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Redirect /index (with or without trailing content) to root
+RewriteCond %{THE_REQUEST} \s/+index[?\s] [NC]
+RewriteRule ^index$ / [R=301,L]
+
+# Internally serve the .html file for clean URLs (no visible extension)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
 # ─── Security Headers ────────────────────────────────────────────────────────
 <IfModule mod_headers.c>
   # Prevent clickjacking
