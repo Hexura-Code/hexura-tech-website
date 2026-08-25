@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 191" width="1128" height="191">
+  <defs>
+    <style>* { font-family: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif; }</style>
+
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#03060d"/>
+      <stop offset="50%"  stop-color="#060f1d"/>
+      <stop offset="100%" stop-color="#071525"/>
+    </linearGradient>
+
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="headGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+
+    <linearGradient id="divV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#3b82f6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="glowR" cx="82%" cy="45%" r="45%">
+      <stop offset="0%"   stop-color="#0284c7" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="nodeHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#06b6d4" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="coreHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="halo"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="haloSm"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="textGlow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="b"/>
+      <feFlood flood-color="#3b82f6" flood-opacity="0.3" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1128" height="191" fill="url(#bg)"/>
+  <rect width="1128" height="191" fill="url(#glowR)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+    <circle cx="20" cy="20" r="0.6" fill="#3b82f6" opacity="0.09"/>
+  </pattern>
+  <rect width="1128" height="191" fill="url(#dots)"/>
+
+  <!-- ── LEFT: BRAND + COPY ── -->
+  <!-- Logo mark -->
+  <g transform="translate(70, 36)">
+    <polygon points="24,2 45,14 45,38 24,50 3,38 3,14"
+             fill="none" stroke="url(#brand)" stroke-width="1.6" opacity="0.9"/>
+    <polygon points="24,8 40,17 40,35 24,44 8,35 8,17" fill="#03060d"/>
+    <text x="24" y="34" text-anchor="middle" font-size="17"
+          font-weight="900" fill="url(#brand)">H</text>
+  </g>
+  <text x="128" y="64" font-size="17" font-weight="800" letter-spacing="4" fill="#f1f5f9">HEXURA</text>
+  <text x="245" y="64" font-size="17" font-weight="300" letter-spacing="4" fill="url(#brand)">TECH</text>
+
+  <!-- Headline -->
+  <text x="70" y="112" font-size="34" font-weight="900"
+        letter-spacing="-1.2" fill="url(#headGrad)" filter="url(#textGlow)">AI-Powered Technology</text>
+  <text x="70" y="150" font-size="34" font-weight="900"
+        letter-spacing="-1.2" fill="url(#headGrad)">Solutions</text>
+
+  <!-- Tagline -->
+  <text x="72" y="176" font-size="11.5" font-weight="600"
+        letter-spacing="1.6" fill="url(#brand)" opacity="0.72">
+    BUILD FASTER.  AUTOMATE SMARTER.  SCALE CONFIDENTLY.
+  </text>
+
+  <!-- ── VERTICAL DIVIDER ── -->
+  <rect x="760" y="0" width="1" height="191" fill="url(#divV)"/>
+
+  <!-- ── RIGHT: NODE CONSTELLATION (x: 780–1090) ── -->
+  <!-- Faint connections -->
+  <g stroke="#1e3a8a" stroke-width="1" fill="none" opacity="0.5">
+    <line x1="850"  y1="38"  x2="960"  y2="26"/>
+    <line x1="960"  y1="26"  x2="1060" y2="60"/>
+    <line x1="850"  y1="38"  x2="920"  y2="100"/>
+    <line x1="960"  y1="26"  x2="920"  y2="100"/>
+    <line x1="1060" y1="60"  x2="920"  y2="100"/>
+    <line x1="920"  y1="100" x2="820"  y2="150"/>
+    <line x1="920"  y1="100" x2="1040" y2="140"/>
+    <line x1="1060" y1="60"  x2="1040" y2="140"/>
+    <line x1="820"  y1="150" x2="1040" y2="140"/>
+  </g>
+
+  <!-- Active connections -->
+  <g stroke="url(#brand)" stroke-width="1.2" fill="none" opacity="0.26">
+    <line x1="960"  y1="26"  x2="920"  y2="100"/>
+    <line x1="920"  y1="100" x2="820"  y2="150"/>
+    <line x1="920"  y1="100" x2="1040" y2="140"/>
+  </g>
+
+  <!-- Halos -->
+  <circle cx="920"  cy="100" r="42" fill="url(#coreHalo)" filter="url(#halo)"/>
+  <circle cx="960"  cy="26"  r="18" fill="url(#nodeHalo)" filter="url(#haloSm)"/>
+  <circle cx="820"  cy="150" r="16" fill="url(#nodeHalo)" filter="url(#haloSm)"/>
+
+  <!-- Small nodes -->
+  <circle cx="850"  cy="38"  r="4.5" fill="#3b82f6" opacity="0.75"/>
+  <circle cx="1060" cy="60"  r="4.5" fill="#06b6d4" opacity="0.75"/>
+  <circle cx="1040" cy="140" r="4.5" fill="#3b82f6" opacity="0.7"/>
+
+  <!-- Ring nodes -->
+  <circle cx="960"  cy="26"  r="7" fill="#03060d"/>
+  <circle cx="960"  cy="26"  r="7" fill="none" stroke="#06b6d4" stroke-width="1.4" opacity="0.9"/>
+  <circle cx="960"  cy="26"  r="3" fill="#06b6d4" opacity="0.95"/>
+
+  <circle cx="820"  cy="150" r="7" fill="#03060d"/>
+  <circle cx="820"  cy="150" r="7" fill="none" stroke="#06b6d4" stroke-width="1.4" opacity="0.9"/>
+  <circle cx="820"  cy="150" r="3" fill="#06b6d4" opacity="0.95"/>
+
+  <!-- MAIN node -->
+  <circle cx="920"  cy="100" r="15" fill="#03060d"/>
+  <circle cx="920"  cy="100" r="15" fill="none" stroke="url(#brand)" stroke-width="2"/>
+  <circle cx="920"  cy="100" r="7"  fill="url(#brand)" opacity="0.95"/>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="186" width="1128" height="5" fill="url(#brand)" opacity="0.6"/>
+</svg>
