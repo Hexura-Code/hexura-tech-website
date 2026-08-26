@@ -14,3 +14,6 @@ upwork-banner-strip.png
 
 # Claude
 .claude/
+
+# Node / build tooling (styles.css is committed as the deployed build output)
+node_modules/
