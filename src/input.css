@@ -374,3 +374,42 @@
       animation: marquee 28s linear infinite;
     }
     .marquee-wrap { overflow: hidden; }
+
+    /* ── Insights: post listing cards ── */
+    .post-card {
+      background: rgba(255,255,255,.025);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 16px;
+      transition: all .3s ease;
+    }
+    .post-card:hover {
+      background: rgba(59,130,246,.045);
+      border-color: rgba(59,130,246,.2);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 48px rgba(0,0,0,.35);
+    }
+
+    /* ── Insights: article body typography ── */
+    .article-body h2 {
+      font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.65rem;
+      color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.3;
+    }
+    .article-body h3 {
+      font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.25rem;
+      color: #fff; margin-top: 2rem; margin-bottom: .75rem;
+    }
+    .article-body p {
+      color: rgba(248,250,252,.75); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem;
+    }
+    .article-body ul { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .article-body li {
+      color: rgba(248,250,252,.75); line-height: 1.8; margin-bottom: .5rem;
+      list-style: disc; font-size: 1.05rem;
+    }
+    .article-body strong { color: #fff; font-weight: 600; }
+    .article-body a { color: #60a5fa; text-decoration: underline; text-underline-offset: 2px; }
+    .article-body a:hover { color: #93c5fd; }
+    .article-body blockquote {
+      border-left: 3px solid #3B82F6; padding-left: 1.25rem; margin: 1.75rem 0;
+      color: rgba(248,250,252,.85); font-style: italic; font-size: 1.1rem;
+    }

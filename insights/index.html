@@ -26,89 +26,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#0B1220', 800: '#0d1628', 900: '#070d18' },
-            'electric-blue': { DEFAULT: '#3B82F6', 400: '#60a5fa', 600: '#2563eb' },
-            'brand-cyan': { DEFAULT: '#06B6D4', 400: '#22d3ee', 600: '#0891b2' },
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Manrope', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-        }
-      }
-    }
-  </script>
+  <!-- Compiled Tailwind CSS + custom styles (built via `npm run build:css`) -->
+  <link rel="stylesheet" href="../styles.css">
 
-  <style>
-    body { background-color: #0B1220; }
-    .gradient-text {
-      background: linear-gradient(135deg, #3B82F6, #06B6D4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Insights | Hexura Tech",
+    "url": "https://www.hexura.tech/insights",
+    "description": "Practical guides on AI agents, automation, software development, cloud, and QA from the Hexura Tech engineering team.",
+    "isPartOf": { "@type": "WebSite", "name": "Hexura Tech", "url": "https://www.hexura.tech" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hexura.tech/" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.hexura.tech/insights" }
+      ]
     }
-    .btn-primary {
-      position: relative; overflow: hidden;
-      background: linear-gradient(135deg, #3B82F6, #06B6D4);
-      color: #fff; padding: 13px 28px;
-      border-radius: 9px; font-weight: 600; font-size: 15px;
-      display: inline-flex; align-items: center; gap: 8px;
-      text-decoration: none; border: none; cursor: pointer;
-      transition: transform .25s ease, box-shadow .25s ease;
-      white-space: nowrap;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,130,246,.4); }
-    .badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(59,130,246,.1);
-      border: 1px solid rgba(59,130,246,.18);
-      color: #60a5fa; padding: 4px 14px;
-      border-radius: 100px; font-size: 12px;
-      font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-    }
-    .badge-cyan {
-      background: rgba(6,182,212,.1);
-      border-color: rgba(6,182,212,.18);
-      color: #22d3ee;
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 4px 14px; border-radius: 100px;
-      font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-    }
-    .hero-bg {
-      background:
-        radial-gradient(ellipse at 15% 50%, rgba(59,130,246,.13) 0%, transparent 50%),
-        radial-gradient(ellipse at 85% 20%, rgba(6,182,212,.09) 0%, transparent 45%),
-        #0B1220;
-    }
-    .link-hover { position: relative; display: inline-block; }
-    .link-hover::after {
-      content: ''; position: absolute; bottom: -2px; left: 0;
-      width: 0; height: 1px;
-      background: linear-gradient(90deg, #3B82F6, #06B6D4);
-      transition: width .3s ease;
-    }
-    .link-hover:hover::after { width: 100%; }
-    .post-card {
-      background: rgba(255,255,255,.025);
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 16px;
-      transition: all .3s ease;
-    }
-    .post-card:hover {
-      background: rgba(59,130,246,.045);
-      border-color: rgba(59,130,246,.2);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 48px rgba(0,0,0,.35);
-    }
-  </style>
+  }
+  </script>
 </head>
 <body class="font-sans text-slate-100 antialiased">
 
@@ -159,7 +97,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <a href="/insights/how-ai-agents-help-startups-automate-operations" class="post-card p-7 flex flex-col">
-        <span class="badge-cyan text-xs mb-4 self-start">AI Agents</span>
+        <span class="badge badge-cyan text-xs mb-4 self-start">AI Agents</span>
         <h2 class="font-display text-xl font-bold text-white mb-3 leading-snug">
           How AI Agents Help Startups Automate Operations Without Hiring
         </h2>
