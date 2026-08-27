@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Building a BI Dashboard That People Actually Use | Hexura Tech</title>
+  <meta name="description" content="Most BI dashboards get built once and opened twice. Here's what separates the ones teams check every day from the ones nobody opens after the demo.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.hexura.tech/insights/building-a-bi-dashboard-people-actually-use">
+
+  <meta property="og:title" content="Building a BI Dashboard That People Actually Use">
+  <meta property="og:description" content="What separates dashboards teams check every day from the ones nobody opens after the demo.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.hexura.tech/insights/building-a-bi-dashboard-people-actually-use">
+  <meta property="og:image" content="https://www.hexura.tech/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Building a BI Dashboard That People Actually Use">
+  <meta name="twitter:description" content="What separates dashboards teams check every day from the ones nobody opens after the demo.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='36' y2='36' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' fill='url(%23g)' opacity='.2'/%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' stroke='url(%23g)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M12 11V25M12 18H24M24 11V25' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css?v=202608272346">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Building a BI Dashboard That People Actually Use",
+    "description": "Most BI dashboards get built once and opened twice. Here's what separates the ones teams check every day from the ones nobody opens after the demo.",
+    "image": "https://www.hexura.tech/og-image.png",
+    "author": { "@type": "Organization", "name": "Hexura Tech", "url": "https://www.hexura.tech" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hexura Tech",
+      "logo": { "@type": "ImageObject", "url": "https://www.hexura.tech/hexura-logo.png" }
+    },
+    "datePublished": "2026-08-28",
+    "dateModified": "2026-08-28",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.hexura.tech/insights/building-a-bi-dashboard-people-actually-use" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hexura.tech/" },
+      { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.hexura.tech/insights" },
+      { "@type": "ListItem", "position": 3, "name": "Building a BI Dashboard People Actually Use", "item": "https://www.hexura.tech/insights/building-a-bi-dashboard-people-actually-use" }
+    ]
+  }
+  </script>
+</head>
+<body class="font-sans text-slate-100 antialiased">
+
+  <!-- ── NAV ── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16 md:h-[72px]">
+        <a href="/" class="flex items-center gap-3 group">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="navLogoGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#3B82F6"/>
+                <stop offset="100%" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" fill="url(#navLogoGrad)" opacity="0.12"/>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" stroke="url(#navLogoGrad)" stroke-width="1.4" fill="none"/>
+            <path d="M13 12.5V25.5M13 19H25M25 12.5V25.5" stroke="url(#navLogoGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-display font-extrabold text-[18px] text-white tracking-tight">Hexura<span class="gradient-text"> Tech</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/#services" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Services</a>
+          <a href="/#about" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">About</a>
+          <a href="/portfolio" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Portfolio</a>
+          <a href="/insights" class="text-sm text-white transition-colors link-hover">Insights</a>
+          <a href="/#book" class="btn-primary !py-2.5 !px-5 !text-sm">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ── -->
+  <header class="pt-40 pb-16 px-5 sm:px-8 hero-bg">
+    <div class="max-w-3xl mx-auto">
+      <nav class="text-sm text-slate-500 mb-6">
+        <a href="/insights" class="hover:text-white transition-colors">Insights</a>
+        <span class="mx-2">/</span>
+        <span class="text-slate-400">Data Analytics</span>
+      </nav>
+      <span class="badge badge-cyan mb-5">Data Analytics</span>
+      <h1 class="font-display text-3xl md:text-5xl font-black mt-5 mb-6 leading-tight text-white">
+        Building a BI Dashboard That People Actually Use
+      </h1>
+      <p class="text-lg text-slate-400 leading-relaxed">
+        Most dashboards get built once, demoed once, and opened twice. Here's what separates the ones teams check every morning from the ones that quietly die.
+      </p>
+      <div class="flex items-center gap-3 mt-8 text-sm text-slate-500">
+        <span>Hexura Tech Team</span>
+        <span>·</span>
+        <time datetime="2026-08-28">August 28, 2026</time>
+        <span>·</span>
+        <span>6 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ── -->
+  <main class="max-w-3xl mx-auto px-5 sm:px-8 pb-20">
+    <div class="article-body">
+      <p>
+        We've inherited a lot of "dead" dashboards from clients — Power BI reports and Tableau workbooks that were commissioned, built, presented once in a leadership meeting, and never opened again. Almost never is this a tooling problem. It's a design and process problem, and it's fixable before you even write your first query.
+      </p>
+
+      <h2>The pattern behind dashboards that die</h2>
+      <p>
+        Every dead dashboard we've diagnosed shares two or three of these traits: it was built to answer a question someone asked once, not a question people ask repeatedly. It shows everything the data allows instead of what someone needs to act on. And nobody's job depends on checking it — there's no decision or habit attached to opening it.
+      </p>
+
+      <h2>What makes a dashboard sticky</h2>
+
+      <h3>It answers a recurring question, not a one-off request</h3>
+      <p>
+        Before building anything, we ask: what decision does this inform, and how often does that decision get made? "How's revenue trending this week" gets checked weekly by someone whose job is revenue. "What was our Q3 2024 conversion rate by channel" is a report, not a dashboard — it should be a one-time export, not a permanent fixture someone has to maintain.
+      </p>
+
+      <h3>It has an owner whose job depends on it</h3>
+      <p>
+        Dashboards without a named, accountable owner drift into irrelevance the moment the person who requested them changes roles. The ones that survive have someone whose actual job performance is reflected in the numbers on screen — a sales lead watching pipeline, an ops manager watching fulfillment SLAs.
+      </p>
+
+      <h3>It shows 5–7 numbers, not 30</h3>
+      <p>
+        The instinct to include "everything, just in case" is the single most common reason dashboards get abandoned. A dashboard someone can scan in 10 seconds and know whether things are fine gets checked daily. A dashboard requiring 5 minutes of interpretation gets checked once a quarter, if that.
+      </p>
+
+      <h3>It's fast — sub-2-second load, every time</h3>
+      <p>
+        A dashboard that takes 8 seconds to load trains people to stop opening it. This is usually a data modeling problem, not a visualization problem — pre-aggregating data in the pipeline instead of running heavy queries live at page-load time is almost always the fix.
+      </p>
+
+      <blockquote>
+        The best test of whether a dashboard will survive: could you delete it tomorrow and someone would complain within a week? If nobody would notice, it was never actually adopted — it just got built.
+      </blockquote>
+
+      <h2>The technical stack that supports this</h2>
+      <p>
+        Tooling matters less than most teams assume, but the underlying data pipeline matters a lot:
+      </p>
+      <ul>
+        <li><strong>ETL/ELT pipelines</strong> that pre-aggregate data on a schedule, so the dashboard queries a small, fast summary table instead of raw transactional data live</li>
+        <li><strong>A single source of truth</strong> — dashboards that pull from spreadsheets manually updated by different people always drift out of sync and lose trust fast</li>
+        <li><strong>Alerting, not just display</strong> — the highest-adoption dashboards we've built pair the visual with a Slack alert when a metric crosses a threshold, so people don't have to remember to check</li>
+      </ul>
+
+      <h2>Where to start</h2>
+      <p>
+        Pick one recurring decision someone in your business makes weekly, find the 3–5 numbers that actually inform it, and build only that. Resist every request to "also add" a metric that isn't tied to that decision. A narrow dashboard people open every day beats a comprehensive one people open never.
+      </p>
+    </div>
+
+    <!-- ── RELATED READING ── -->
+    <div class="mt-14">
+      <h3 class="font-display text-sm font-bold text-slate-500 uppercase tracking-wide mb-4">Related Reading</h3>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="/insights/cloud-cost-optimisation-what-actually-moves-the-needle" class="post-card p-5 flex flex-col">
+          <span class="text-sm font-semibold text-white leading-snug">Cloud Cost Optimisation: What Actually Moves the Needle</span>
+          <span class="text-xs font-semibold text-electric-blue-400 link-hover mt-2">Read article →</span>
+        </a>
+        <a href="/insights/how-ai-agents-help-startups-automate-operations" class="post-card p-5 flex flex-col">
+          <span class="text-sm font-semibold text-white leading-snug">How AI Agents Help Startups Automate Operations Without Hiring</span>
+          <span class="text-xs font-semibold text-electric-blue-400 link-hover mt-2">Read article →</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div class="mt-14 p-8 rounded-2xl border border-white/10" style="background: linear-gradient(135deg, rgba(59,130,246,.06), rgba(6,182,212,.06));">
+      <h3 class="font-display text-xl font-bold text-white mb-2">Have data nobody's actually using?</h3>
+      <p class="text-slate-400 mb-5">Book a free 30-minute discovery call — we'll help you find the 5 numbers that matter before building anything.</p>
+      <a href="/#book" class="btn-primary">Book a Free Call</a>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="border-t border-white/5 py-10 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>© 2026 Hexura Tech. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="/insights" class="hover:text-white transition-colors">Insights</a>
+        <a href="/#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
