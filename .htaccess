@@ -1,5 +1,8 @@
 # ─── Hexura Tech — Security & Performance Headers ───────────────────────────
 
+# Custom 404 page (returns real HTTP 404 status, not a soft 404)
+ErrorDocument 404 /404.html
+
 RewriteEngine On
 
 # Force HTTPS
