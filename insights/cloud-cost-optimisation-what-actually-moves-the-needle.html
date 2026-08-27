@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Cloud Cost Optimisation: What Actually Moves the Needle | Hexura Tech</title>
+  <meta name="description" content="The AWS, Azure, and GCP cost levers that meaningfully cut spend, versus the ones that just look good in a blog post. A practical breakdown from real client engagements.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.hexura.tech/insights/cloud-cost-optimisation-what-actually-moves-the-needle">
+
+  <meta property="og:title" content="Cloud Cost Optimisation: What Actually Moves the Needle">
+  <meta property="og:description" content="The AWS/Azure/GCP levers that meaningfully cut spend versus the ones that just look good in a blog post.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.hexura.tech/insights/cloud-cost-optimisation-what-actually-moves-the-needle">
+  <meta property="og:image" content="https://www.hexura.tech/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cloud Cost Optimisation: What Actually Moves the Needle">
+  <meta name="twitter:description" content="The AWS/Azure/GCP levers that meaningfully cut spend versus the ones that just look good in a blog post.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='36' y2='36' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' fill='url(%23g)' opacity='.2'/%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' stroke='url(%23g)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M12 11V25M12 18H24M24 11V25' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css?v=202608272137">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cloud Cost Optimisation: What Actually Moves the Needle",
+    "description": "The AWS, Azure, and GCP cost levers that meaningfully cut spend, versus the ones that just look good in a blog post. A practical breakdown from real client engagements.",
+    "image": "https://www.hexura.tech/og-image.png",
+    "author": { "@type": "Organization", "name": "Hexura Tech", "url": "https://www.hexura.tech" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hexura Tech",
+      "logo": { "@type": "ImageObject", "url": "https://www.hexura.tech/hexura-logo.png" }
+    },
+    "datePublished": "2026-08-27",
+    "dateModified": "2026-08-27",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.hexura.tech/insights/cloud-cost-optimisation-what-actually-moves-the-needle" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hexura.tech/" },
+      { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.hexura.tech/insights" },
+      { "@type": "ListItem", "position": 3, "name": "Cloud Cost Optimisation", "item": "https://www.hexura.tech/insights/cloud-cost-optimisation-what-actually-moves-the-needle" }
+    ]
+  }
+  </script>
+</head>
+<body class="font-sans text-slate-100 antialiased">
+
+  <!-- ── NAV ── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16 md:h-[72px]">
+        <a href="/" class="flex items-center gap-3 group">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="navLogoGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#3B82F6"/>
+                <stop offset="100%" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" fill="url(#navLogoGrad)" opacity="0.12"/>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" stroke="url(#navLogoGrad)" stroke-width="1.4" fill="none"/>
+            <path d="M13 12.5V25.5M13 19H25M25 12.5V25.5" stroke="url(#navLogoGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-display font-extrabold text-[18px] text-white tracking-tight">Hexura<span class="gradient-text"> Tech</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/#services" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Services</a>
+          <a href="/#about" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">About</a>
+          <a href="/portfolio" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Portfolio</a>
+          <a href="/insights" class="text-sm text-white transition-colors link-hover">Insights</a>
+          <a href="/#book" class="btn-primary !py-2.5 !px-5 !text-sm">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ── -->
+  <header class="pt-40 pb-16 px-5 sm:px-8 hero-bg">
+    <div class="max-w-3xl mx-auto">
+      <nav class="text-sm text-slate-500 mb-6">
+        <a href="/insights" class="hover:text-white transition-colors">Insights</a>
+        <span class="mx-2">/</span>
+        <span class="text-slate-400">Cloud & DevOps</span>
+      </nav>
+      <span class="badge badge-cyan mb-5">Cloud & DevOps</span>
+      <h1 class="font-display text-3xl md:text-5xl font-black mt-5 mb-6 leading-tight text-white">
+        Cloud Cost Optimisation: What Actually Moves the Needle
+      </h1>
+      <p class="text-lg text-slate-400 leading-relaxed">
+        Most cloud cost advice ranks well on Google and does almost nothing to your bill. Here's what we've actually seen cut spend on real client infrastructure.
+      </p>
+      <div class="flex items-center gap-3 mt-8 text-sm text-slate-500">
+        <span>Hexura Tech Team</span>
+        <span>·</span>
+        <time datetime="2026-08-27">August 27, 2026</time>
+        <span>·</span>
+        <span>6 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ── -->
+  <main class="max-w-3xl mx-auto px-5 sm:px-8 pb-20">
+    <div class="article-body">
+      <p>
+        Every cloud provider's own cost-optimisation guide reads the same: "right-size your instances, delete unused resources, use reserved capacity." All true. All incomplete. The advice that actually moves a bill by a meaningful percentage rarely fits in a bullet list, because it requires understanding how a specific system is actually being used — not generic best practices.
+      </p>
+
+      <h2>What genuinely moves the needle</h2>
+
+      <h3>1. Committed-use discounts, sized correctly</h3>
+      <p>
+        Reserved Instances (AWS), Committed Use Discounts (GCP), and Reserved VM Instances (Azure) routinely deliver <strong>30–60% savings</strong> over on-demand pricing — but only if sized against genuinely stable baseline load, not peak. The mistake we see constantly: teams commit based on current total usage, including autoscaling peaks, and end up paying for reserved capacity they don't consistently use. Commit against your true floor, let autoscaling handle everything above it on-demand or spot.
+      </p>
+
+      <h3>2. Spot/preemptible instances for the right workloads</h3>
+      <p>
+        For fault-tolerant, stateless, or batch workloads — CI/CD runners, data processing jobs, non-critical background workers — spot instances (AWS/Azure) or preemptible VMs (GCP) cut compute costs by <strong>60–90%</strong>. This is one of the highest-leverage changes available, and one of the most underused, because it requires architecting for interruption up front. Retrofitting it into a system not designed for it is real work, but the payoff is large and recurring.
+      </p>
+
+      <h3>3. Storage tiering, actually enforced</h3>
+      <p>
+        Every provider has cheap cold-storage tiers (S3 Glacier, Azure Archive, GCP Coldline) that cost a fraction of standard storage. The gap isn't awareness — it's that lifecycle policies rarely get set up and maintained. A one-time audit plus automated lifecycle rules (move to cold storage after 90 days of no access, delete after retention period) is a few hours of work that keeps paying off indefinitely.
+      </p>
+
+      <h3>4. Killing orphaned resources</h3>
+      <p>
+        Unattached EBS volumes, idle load balancers, forgotten dev/staging environments left running, old snapshots nobody deletes — in nearly every cost audit we've run, this category alone accounts for a real, recoverable chunk of monthly spend. It's boring work, but it's close to free money: nothing architectural has to change, you're just turning off what nobody's using.
+      </p>
+
+      <h2>What doesn't move the needle much (despite the blog posts)</h2>
+
+      <h3>Switching cloud providers entirely</h3>
+      <p>
+        Multi-cloud "cost arbitrage" articles imply meaningful savings from picking the cheapest provider per workload. In practice, the migration cost, added operational complexity, and lost volume discounts from splitting spend across providers usually outweigh the marginal pricing differences — unless you're operating at a scale where dedicated FinOps engineering makes the complexity worth it.
+      </p>
+
+      <h3>Micro-optimising individual instance types</h3>
+      <p>
+        Endlessly tuning between similar instance families for a few percent difference burns engineering time that's worth more than the savings. This matters at hyperscale; for most mid-size companies it's a distraction from the four levers above.
+      </p>
+
+      <h3>Aggressive autoscaling tuning without addressing root cause</h3>
+      <p>
+        If an application is inefficient — unoptimised queries, no caching layer, chatty microservices — no amount of autoscaling tuning fixes the underlying waste; it just autoscales the waste more precisely. Fix the application first.
+      </p>
+
+      <blockquote>
+        The pattern across every real cost audit we've done: the biggest wins come from matching commitment/pricing model to actual usage pattern, not from squeezing marginal efficiency out of infrastructure that's fundamentally well-architected already.
+      </blockquote>
+
+      <h2>Where to actually start</h2>
+      <p>
+        Run a proper cost audit before optimising anything — most cloud providers' native cost tools (AWS Cost Explorer, Azure Cost Management, GCP's Cost Table) will surface orphaned resources and usage patterns within an hour of setup. Fix the "free money" items first (orphaned resources, storage tiering), then move to the bigger architectural levers (committed-use discounts, spot instances for the right workloads) once you understand your actual usage baseline.
+      </p>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div class="mt-14 p-8 rounded-2xl border border-white/10" style="background: linear-gradient(135deg, rgba(59,130,246,.06), rgba(6,182,212,.06));">
+      <h3 class="font-display text-xl font-bold text-white mb-2">Not sure where your cloud spend is actually going?</h3>
+      <p class="text-slate-400 mb-5">Book a free 30-minute discovery call — we'll tell you honestly whether a full audit is worth it for your setup.</p>
+      <a href="/#book" class="btn-primary">Book a Free Call</a>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="border-t border-white/5 py-10 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>© 2026 Hexura Tech. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="/insights" class="hover:text-white transition-colors">Insights</a>
+        <a href="/#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
