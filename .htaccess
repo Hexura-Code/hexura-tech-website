@@ -27,6 +27,12 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^([^/]+)$ $1.html [L]
 
+# Same, one directory level deep (e.g. /insights/article-slug -> insights/article-slug.html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1/$2.html -f
+RewriteRule ^([^/]+)/([^/]+)$ $1/$2.html [L]
+
 # ─── Security Headers ────────────────────────────────────────────────────────
 <IfModule mod_headers.c>
   # Prevent clickjacking
