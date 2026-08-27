@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Insights | Hexura Tech — AI, Automation & Software Engineering</title>
+  <meta name="description" content="Practical guides on AI agents, automation, software development, cloud, and QA from the Hexura Tech engineering team.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.hexura.tech/insights">
+
+  <meta property="og:title" content="Insights | Hexura Tech">
+  <meta property="og:description" content="Practical guides on AI agents, automation, software development, cloud, and QA from the Hexura Tech engineering team.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hexura.tech/insights">
+  <meta property="og:image" content="https://www.hexura.tech/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insights | Hexura Tech">
+  <meta name="twitter:description" content="Practical guides on AI agents, automation, software development, cloud, and QA from the Hexura Tech engineering team.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='36' y2='36' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' fill='url(%23g)' opacity='.2'/%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' stroke='url(%23g)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M12 11V25M12 18H24M24 11V25' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0B1220', 800: '#0d1628', 900: '#070d18' },
+            'electric-blue': { DEFAULT: '#3B82F6', 400: '#60a5fa', 600: '#2563eb' },
+            'brand-cyan': { DEFAULT: '#06B6D4', 400: '#22d3ee', 600: '#0891b2' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Manrope', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #0B1220; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6, #06B6D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-primary {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #3B82F6, #06B6D4);
+      color: #fff; padding: 13px 28px;
+      border-radius: 9px; font-weight: 600; font-size: 15px;
+      display: inline-flex; align-items: center; gap: 8px;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(59,130,246,.4); }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(59,130,246,.1);
+      border: 1px solid rgba(59,130,246,.18);
+      color: #60a5fa; padding: 4px 14px;
+      border-radius: 100px; font-size: 12px;
+      font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .badge-cyan {
+      background: rgba(6,182,212,.1);
+      border-color: rgba(6,182,212,.18);
+      color: #22d3ee;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 14px; border-radius: 100px;
+      font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .hero-bg {
+      background:
+        radial-gradient(ellipse at 15% 50%, rgba(59,130,246,.13) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 20%, rgba(6,182,212,.09) 0%, transparent 45%),
+        #0B1220;
+    }
+    .link-hover { position: relative; display: inline-block; }
+    .link-hover::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: linear-gradient(90deg, #3B82F6, #06B6D4);
+      transition: width .3s ease;
+    }
+    .link-hover:hover::after { width: 100%; }
+    .post-card {
+      background: rgba(255,255,255,.025);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 16px;
+      transition: all .3s ease;
+    }
+    .post-card:hover {
+      background: rgba(59,130,246,.045);
+      border-color: rgba(59,130,246,.2);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 48px rgba(0,0,0,.35);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-100 antialiased">
+
+  <!-- ── NAV ── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16 md:h-[72px]">
+        <a href="/" class="flex items-center gap-3 group">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hexura Tech Logo">
+            <defs>
+              <linearGradient id="navLogoGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#3B82F6"/>
+                <stop offset="100%" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" fill="url(#navLogoGrad)" opacity="0.12"/>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" stroke="url(#navLogoGrad)" stroke-width="1.4" fill="none"/>
+            <path d="M13 12.5V25.5M13 19H25M25 12.5V25.5" stroke="url(#navLogoGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-display font-extrabold text-[18px] text-white tracking-tight">Hexura<span class="gradient-text"> Tech</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/#services" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Services</a>
+          <a href="/#about" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">About</a>
+          <a href="/portfolio" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Portfolio</a>
+          <a href="/insights" class="text-sm text-white transition-colors link-hover">Insights</a>
+          <a href="/#book" class="btn-primary !py-2.5 !px-5 !text-sm">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <header class="pt-40 pb-20 px-5 sm:px-8 hero-bg">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="badge">INSIGHTS</span>
+      <h1 class="font-display text-4xl md:text-6xl font-black mt-6 mb-6 leading-tight">
+        Ideas on AI, Automation<br class="hidden md:block"> & <span class="gradient-text">Building Better Software</span>
+      </h1>
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+        Practical guides from the Hexura Tech engineering team — what we're learning as we build AI agents, automation, and production software for real clients.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── POSTS ── -->
+  <main class="max-w-6xl mx-auto px-5 sm:px-8 pb-28">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <a href="/insights/how-ai-agents-help-startups-automate-operations" class="post-card p-7 flex flex-col">
+        <span class="badge-cyan text-xs mb-4 self-start">AI Agents</span>
+        <h2 class="font-display text-xl font-bold text-white mb-3 leading-snug">
+          How AI Agents Help Startups Automate Operations Without Hiring
+        </h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5 flex-1">
+          A practical look at where AI agents actually save startups time and money — customer support, data entry, and repetitive workflows — with real implementation patterns.
+        </p>
+        <span class="text-sm font-semibold text-electric-blue-400 link-hover">Read article →</span>
+      </a>
+
+      <div class="post-card p-7 flex flex-col opacity-50 cursor-default">
+        <span class="badge text-xs mb-4 self-start">Coming Soon</span>
+        <h2 class="font-display text-xl font-bold text-white mb-3 leading-snug">
+          Choosing Between Playwright, Selenium & Cypress for AI-Assisted QA
+        </h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5 flex-1">
+          A framework-by-framework comparison for teams building self-healing test suites in 2026.
+        </p>
+      </div>
+
+      <div class="post-card p-7 flex flex-col opacity-50 cursor-default">
+        <span class="badge text-xs mb-4 self-start">Coming Soon</span>
+        <h2 class="font-display text-xl font-bold text-white mb-3 leading-snug">
+          Cloud Cost Optimisation: What Actually Moves the Needle
+        </h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5 flex-1">
+          The AWS/Azure/GCP levers that meaningfully cut spend versus the ones that just look good in a blog post.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="border-t border-white/5 py-10 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>© 2026 Hexura Tech. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="/portfolio" class="hover:text-white transition-colors">Portfolio</a>
+        <a href="/#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
