@@ -1,0 +1,25 @@
+{
+  "name": "hexura-tech-website",
+  "version": "1.0.0",
+  "description": "Hexura Tech marketing website",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o styles.css --minify",
+    "watch:css": "tailwindcss -i src/input.css -o styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hexura-Code/hexura-tech-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Hexura-Code/hexura-tech-website/issues"
+  },
+  "homepage": "https://github.com/Hexura-Code/hexura-tech-website#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
