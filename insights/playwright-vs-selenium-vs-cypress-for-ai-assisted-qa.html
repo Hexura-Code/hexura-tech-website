@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Playwright vs Selenium vs Cypress for AI-Assisted QA | Hexura Tech</title>
+  <meta name="description" content="A framework-by-framework comparison of Playwright, Selenium, and Cypress for teams building self-healing, AI-assisted test suites in 2026.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.hexura.tech/insights/playwright-vs-selenium-vs-cypress-for-ai-assisted-qa">
+
+  <meta property="og:title" content="Playwright vs Selenium vs Cypress for AI-Assisted QA">
+  <meta property="og:description" content="A framework-by-framework comparison for teams building self-healing test suites in 2026.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.hexura.tech/insights/playwright-vs-selenium-vs-cypress-for-ai-assisted-qa">
+  <meta property="og:image" content="https://www.hexura.tech/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Playwright vs Selenium vs Cypress for AI-Assisted QA">
+  <meta name="twitter:description" content="A framework-by-framework comparison for teams building self-healing test suites in 2026.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='36' y2='36' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' fill='url(%23g)' opacity='.2'/%3E%3Cpath d='M18 2L32.7 10.5V27.5L18 36L3.3 27.5V10.5L18 2Z' stroke='url(%23g)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M12 11V25M12 18H24M24 11V25' stroke='url(%23g)' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css?v=202608272137">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Playwright vs Selenium vs Cypress for AI-Assisted QA",
+    "description": "A framework-by-framework comparison of Playwright, Selenium, and Cypress for teams building self-healing, AI-assisted test suites in 2026.",
+    "image": "https://www.hexura.tech/og-image.png",
+    "author": { "@type": "Organization", "name": "Hexura Tech", "url": "https://www.hexura.tech" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hexura Tech",
+      "logo": { "@type": "ImageObject", "url": "https://www.hexura.tech/hexura-logo.png" }
+    },
+    "datePublished": "2026-08-27",
+    "dateModified": "2026-08-27",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.hexura.tech/insights/playwright-vs-selenium-vs-cypress-for-ai-assisted-qa" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hexura.tech/" },
+      { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.hexura.tech/insights" },
+      { "@type": "ListItem", "position": 3, "name": "Playwright vs Selenium vs Cypress for AI-Assisted QA", "item": "https://www.hexura.tech/insights/playwright-vs-selenium-vs-cypress-for-ai-assisted-qa" }
+    ]
+  }
+  </script>
+</head>
+<body class="font-sans text-slate-100 antialiased">
+
+  <!-- ── NAV ── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16 md:h-[72px]">
+        <a href="/" class="flex items-center gap-3 group">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="navLogoGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#3B82F6"/>
+                <stop offset="100%" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" fill="url(#navLogoGrad)" opacity="0.12"/>
+            <path d="M19 2.5L34.5 11.25V28.75L19 37.5L3.5 28.75V11.25L19 2.5Z" stroke="url(#navLogoGrad)" stroke-width="1.4" fill="none"/>
+            <path d="M13 12.5V25.5M13 19H25M25 12.5V25.5" stroke="url(#navLogoGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-display font-extrabold text-[18px] text-white tracking-tight">Hexura<span class="gradient-text"> Tech</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/#services" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Services</a>
+          <a href="/#about" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">About</a>
+          <a href="/portfolio" class="text-sm text-slate-400 hover:text-white transition-colors link-hover">Portfolio</a>
+          <a href="/insights" class="text-sm text-white transition-colors link-hover">Insights</a>
+          <a href="/#book" class="btn-primary !py-2.5 !px-5 !text-sm">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── ARTICLE HEADER ── -->
+  <header class="pt-40 pb-16 px-5 sm:px-8 hero-bg">
+    <div class="max-w-3xl mx-auto">
+      <nav class="text-sm text-slate-500 mb-6">
+        <a href="/insights" class="hover:text-white transition-colors">Insights</a>
+        <span class="mx-2">/</span>
+        <span class="text-slate-400">QA & Testing</span>
+      </nav>
+      <span class="badge badge-cyan mb-5">QA & Testing</span>
+      <h1 class="font-display text-3xl md:text-5xl font-black mt-5 mb-6 leading-tight text-white">
+        Playwright vs Selenium vs Cypress for AI-Assisted QA
+      </h1>
+      <p class="text-lg text-slate-400 leading-relaxed">
+        Every one of these frameworks can automate a browser. The real question for 2026 is which one holds up when you start layering AI-assisted test generation and self-healing scripts on top.
+      </p>
+      <div class="flex items-center gap-3 mt-8 text-sm text-slate-500">
+        <span>Hexura Tech Team</span>
+        <span>·</span>
+        <time datetime="2026-08-27">August 27, 2026</time>
+        <span>·</span>
+        <span>7 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── ARTICLE BODY ── -->
+  <main class="max-w-3xl mx-auto px-5 sm:px-8 pb-20">
+    <div class="article-body">
+      <p>
+        We get asked this constantly by engineering leads setting up a new test practice, or migrating off a framework that's become a maintenance burden. The honest answer is that all three frameworks can get the job done — the differentiator in 2026 isn't raw capability, it's how well each one plays with the AI layer teams are now building on top: self-healing locators, AI-generated test cases, and autonomous exploratory agents.
+      </p>
+
+      <h2>The short version</h2>
+      <p>
+        If you're starting fresh today with no legacy investment, <strong>Playwright is our default recommendation</strong> for most teams. If you have deep existing Selenium infrastructure across multiple languages and teams, migrating isn't always worth the disruption. If you're a frontend-heavy team already in the Cypress ecosystem and mostly testing web apps (not native), Cypress remains solid — just know its constraints going in.
+      </p>
+
+      <h2>Playwright</h2>
+      <p>
+        Built by Microsoft, Playwright has become the framework we reach for on new projects, and here's why it matters specifically for AI-assisted QA:
+      </p>
+      <ul>
+        <li><strong>Auto-waiting and resilient selectors</strong> reduce the flakiness that AI self-healing tools have to compensate for in the first place — less noise for the AI layer to work around</li>
+        <li><strong>True cross-browser support</strong> (Chromium, Firefox, WebKit) from one API, which matters when AI-generated tests need to run consistently across engines without framework-specific rewrites</li>
+        <li><strong>Native parallelization</strong> that scales cleanly, which matters a lot when an AI agent is generating and running hundreds of exploratory test variations</li>
+        <li><strong>First-class TypeScript support</strong> makes it easier to feed structured test intent to LLM-based test generation tools</li>
+      </ul>
+      <p>
+        The tradeoff: it's younger than Selenium, so if you need obscure legacy browser support (old IE, for instance), it's not the tool.
+      </p>
+
+      <h2>Selenium</h2>
+      <p>
+        Selenium is the incumbent for a reason — it's been the industry standard for over a decade, has the widest language support (Java, Python, C#, Ruby, JavaScript), and an enormous ecosystem of integrations, including most commercial AI-testing platforms, which tend to build Selenium support first since it's still the largest installed base.
+      </p>
+      <ul>
+        <li><strong>Broadest browser and device coverage</strong>, including real device farms and legacy browser versions</li>
+        <li><strong>Largest ecosystem</strong> of third-party tools, grid providers, and CI integrations</li>
+        <li><strong>More flakiness by default</strong> — Selenium doesn't auto-wait the way Playwright does, so teams typically need more explicit waits or a self-healing layer to compensate, which is exactly where AI test-maintenance tools earn their keep</li>
+      </ul>
+      <p>
+        If your organisation already has a mature Selenium grid and trained engineers across multiple teams, the cost of migrating rarely justifies itself just to chase a newer framework. Layer AI-assisted self-healing on top of what you have instead.
+      </p>
+
+      <h2>Cypress</h2>
+      <p>
+        Cypress optimised hard for developer experience — fast feedback loops, excellent debugging, and a test runner that's genuinely pleasant to work in day-to-day.
+      </p>
+      <ul>
+        <li><strong>Best-in-class developer experience</strong> — time-travel debugging, automatic screenshots, real-time reload</li>
+        <li><strong>Runs inside the browser</strong>, which makes some testing patterns simpler but also means true multi-tab and cross-origin testing has historically been more limited than Playwright or Selenium (recent versions have improved this significantly)</li>
+        <li><strong>No native mobile app testing</strong> — if you need to test native iOS/Android alongside web, you'll need a second tool regardless of which of these three you pick for web</li>
+      </ul>
+
+      <blockquote>
+        The framework choice matters less than most teams think. What actually determines whether your AI-assisted QA investment pays off is test architecture — how isolated your tests are, how stable your selectors are, and how much flakiness exists before the AI layer even gets involved.
+      </blockquote>
+
+      <h2>What actually matters for AI-assisted QA specifically</h2>
+      <p>
+        Regardless of which framework you land on, these are the factors that determine whether self-healing scripts and AI test generation actually work well on top of it:
+      </p>
+      <ul>
+        <li><strong>Selector stability</strong> — use data-testid attributes or accessible roles, not brittle CSS/XPath chains, so AI healing has something reliable to anchor to</li>
+        <li><strong>Test isolation</strong> — tests that depend on shared state or execution order break AI-generated variations in ways that are hard to debug</li>
+        <li><strong>Structured test metadata</strong> — clear naming and tagging makes it dramatically easier for an LLM to understand what a test is actually verifying, and to generate sensible new coverage</li>
+      </ul>
+
+      <h2>Our recommendation</h2>
+      <p>
+        For a genuinely new project in 2026, we start with Playwright by default. For an established Selenium codebase, we layer AI-assisted maintenance tools on top rather than migrating. For frontend-focused web-only teams already happy in Cypress, we typically leave it as-is and focus AI investment on test generation rather than framework replacement.
+      </p>
+      <p>
+        The framework is rarely the bottleneck — the surrounding test architecture usually is.
+      </p>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div class="mt-14 p-8 rounded-2xl border border-white/10" style="background: linear-gradient(135deg, rgba(59,130,246,.06), rgba(6,182,212,.06));">
+      <h3 class="font-display text-xl font-bold text-white mb-2">Building or maintaining a test automation suite?</h3>
+      <p class="text-slate-400 mb-5">Book a free 30-minute discovery call — we'll give you a straight answer on framework choice and where AI actually helps.</p>
+      <a href="/#book" class="btn-primary">Book a Free Call</a>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="border-t border-white/5 py-10 px-5 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>© 2026 Hexura Tech. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <a href="/insights" class="hover:text-white transition-colors">Insights</a>
+        <a href="/#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
