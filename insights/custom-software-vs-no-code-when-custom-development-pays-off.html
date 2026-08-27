@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../styles.css?v=202608272137">
+  <link rel="stylesheet" href="../styles.css?v=202608272213">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -55,6 +55,46 @@
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.hexura.tech/" },
       { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.hexura.tech/insights" },
       { "@type": "ListItem", "position": 3, "name": "Custom Software vs No-Code", "item": "https://www.hexura.tech/insights/custom-software-vs-no-code-when-custom-development-pays-off" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I migrate my no-code app to custom code later, or do I have to start over?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You rarely start completely from zero. Your data model, user flows, and business logic are all reusable knowledge even if none of the underlying code is. A migration is usually faster than the original build because you already know what the product needs to do."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it typically cost to rebuild a no-code MVP as custom software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends entirely on complexity, but rebuilding is almost always cheaper than the cost of maintaining a no-code build's workarounds over the following year. The real cost isn't the rebuild — it's waiting too long to start it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Webflow or Bubble ever the right permanent choice, not just a stepping stone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Marketing sites, simple internal tools, and products with genuinely standard CRUD logic can stay on no-code indefinitely. The question isn't the platform's ceiling in the abstract, it's whether your specific product bumps into it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the biggest mistake founders make with this decision?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Treating it as a one-time, permanent choice instead of a staged one. The best outcomes come from deliberately using no-code to validate cheaply, then making an informed decision to move to custom once complexity actually earns it."
+        }
+      }
     ]
   }
   </script>
@@ -161,17 +201,36 @@
         The founders who make the best call aren't the ones who pick one approach and stick with it forever — they're the ones who validate on no-code, then move to custom development at the moment their product's complexity actually demands it, not before and not long after.
       </blockquote>
 
-      <h2>A practical way to decide</h2>
+      <h2>Three questions to ask before you decide</h2>
+      <ol>
+        <li><strong>Does my product's core logic fit inside standard forms, records, and workflows?</strong> Or is the thing that makes us different something a no-code platform wasn't designed for?</li>
+        <li><strong>Am I regularly hitting a wall and building workarounds</strong>, rather than just using the platform normally?</li>
+        <li><strong>Is my growth plan going to require engineering hires</strong> who'll need to work inside this platform?</li>
+      </ol>
       <p>
-        Ask three questions honestly:
+        Answering yes to two or more is usually the signal that it's time to talk to a development team about what a custom rebuild would look like — ideally before the no-code version has grown complex enough to make that conversation painful.
       </p>
-      <ul>
-        <li>Does my product's core logic fit inside standard forms, records, and workflows — or is the thing that makes us different something a no-code platform wasn't designed for?</li>
-        <li>Am I regularly hitting a wall and building workarounds, rather than just using the platform normally?</li>
-        <li>Is my growth plan going to require engineering hires who'll need to work inside this platform?</li>
-      </ul>
+
+      <h2>Common questions we get asked</h2>
+
+      <h3>Can I migrate my no-code app to custom code later, or do I have to start over?</h3>
       <p>
-        If you're answering yes to two or more of these, it's usually time to talk to a development team about what a custom rebuild would actually look like — ideally before the no-code version has grown complex enough to make that conversation painful.
+        You rarely start completely from zero. Your data model, user flows, and business logic are all reusable knowledge even if none of the underlying code is. A migration is usually faster than the original build because you already know what the product needs to do — the ambiguity that slowed down the first build is gone.
+      </p>
+
+      <h3>How much does it typically cost to rebuild a no-code MVP as custom software?</h3>
+      <p>
+        It depends entirely on complexity, but as a rough frame: rebuilding is almost always cheaper than the original no-code build was expensive to maintain over the following year, once you account for the engineering hours spent on workarounds. The real cost isn't the rebuild — it's waiting too long to start it.
+      </p>
+
+      <h3>Is Webflow or Bubble ever the right permanent choice, not just a stepping stone?</h3>
+      <p>
+        Yes. Marketing sites, simple internal tools, and products with genuinely standard CRUD logic can stay on no-code indefinitely. Plenty of profitable businesses run their entire product on Bubble or Airtable for years with no issues — the question isn't the platform's ceiling in the abstract, it's whether your specific product bumps into it.
+      </p>
+
+      <h3>What's the biggest mistake founders make with this decision?</h3>
+      <p>
+        Treating it as a one-time, permanent choice instead of a staged one. The best outcomes come from deliberately using no-code to validate cheaply, then making an active, informed decision to move to custom once the product's complexity actually earns it — not drifting into a custom rebuild reactively once things have already broken.
       </p>
     </div>
 
