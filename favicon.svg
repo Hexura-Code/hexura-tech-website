@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="hg" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <!-- Hexagon background -->
+  <polygon points="50,4 93,27.5 93,72.5 50,96 7,72.5 7,27.5" fill="#0d1628"/>
+  <!-- Hexagon border -->
+  <polygon points="50,4 93,27.5 93,72.5 50,96 7,72.5 7,27.5" fill="none" stroke="url(#hg)" stroke-width="4"/>
+  <!-- H letter -->
+  <rect x="30" y="28" width="10" height="44" rx="3" fill="url(#hg)"/>
+  <rect x="60" y="28" width="10" height="44" rx="3" fill="url(#hg)"/>
+  <rect x="30" y="44" width="40" height="10" rx="3" fill="url(#hg)" opacity="0.7"/>
+</svg>
